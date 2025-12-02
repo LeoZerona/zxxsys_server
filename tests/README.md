@@ -76,7 +76,9 @@ pytest --cov=. --cov-report=html
 
 ## 测试配置
 
-测试使用临时 SQLite 数据库，每个测试运行前会自动创建，运行后自动清理。测试配置在 `conftest.py` 中定义。
+测试使用 **MySQL test 数据库**，所有测试数据会保留在数据库中。测试配置在 `conftest.py` 中定义。
+
+**注意**：测试完成后数据不会自动清理，会保留在 MySQL test 数据库中。
 
 ## 测试数据
 

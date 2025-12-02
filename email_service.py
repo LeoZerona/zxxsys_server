@@ -174,24 +174,57 @@ def send_verification_code(email):
         expires_at = datetime.utcnow() + timedelta(minutes=expire_minutes)
         
         # 保存或更新验证码到数据库
+        print(f"   💾 准备保存验证码到数据库...")
         if existing_verification:
             # 更新现有验证码
+            print(f"   🔄 更新现有验证码记录 (ID: {existing_verification.id})")
             existing_verification.code = code
             existing_verification.expires_at = expires_at
             existing_verification.is_used = False
             existing_verification.created_at = datetime.utcnow()
+            verification = existing_verification  # 保存引用用于后续验证
         else:
             # 创建新验证码记录
+            print(f"   ➕ 创建新的验证码记录")
             verification = EmailVerification(
                 email=email,
                 code=code,
                 expires_at=expires_at
             )
             db.session.add(verification)
+            print(f"   ✅ 验证码对象已添加到会话")
         
-        db.session.commit()
+        # 刷新会话以获取 ID
+        db.session.flush()
+        print(f"   🔍 验证码记录 ID: {verification.id if verification.id else '未生成'}")
+        
+        # 提交到数据库
+        print(f"   💾 开始提交事务...")
+        try:
+            db.session.commit()
+            print(f"   ✅ 验证码已成功保存到数据库!")
+        except Exception as commit_error:
+            print(f"   ❌ 数据库提交失败: {str(commit_error)}")
+            import traceback
+            traceback.print_exc()
+            db.session.rollback()
+            raise commit_error
+        
+        # 验证验证码是否真的保存到数据库
+        print(f"   🔍 验证验证码是否保存成功...")
+        saved_verification = EmailVerification.query.filter_by(
+            email=email,
+            code=code
+        ).first()
+        
+        if saved_verification:
+            print(f"   ✅ 验证码已确认保存! ID: {saved_verification.id}, 邮箱: {saved_verification.email}, 验证码: {saved_verification.code}")
+        else:
+            print(f"   ⚠️  警告: 提交成功但无法从数据库查询到验证码!")
+            print(f"   📊 数据库 URI: {current_app.config.get('SQLALCHEMY_DATABASE_URI', '未知')}")
         
         # 发送邮件
+        print(f"   📧 准备发送验证码邮件...")
         send_success = send_verification_email(email, code)
         
         if send_success:
@@ -216,6 +249,17 @@ def send_verification_code(email):
 def verify_code(email, code):
     """验证验证码"""
     try:
+        # 检查是否是万能验证码（仅开发环境）
+        universal_code = current_app.config.get('UNIVERSAL_VERIFICATION_CODE', '')
+        if universal_code and code == universal_code:
+            print(f"   🔓 使用万能验证码验证成功: {code}")
+            print(f"   ⚠️  注意: 这是测试用的万能验证码，生产环境请禁用！")
+            return {
+                'success': True,
+                'message': '验证码验证成功（万能验证码）'
+            }
+        
+        # 正常验证码验证流程
         verification = EmailVerification.query.filter_by(
             email=email,
             code=code,
