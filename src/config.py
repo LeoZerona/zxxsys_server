@@ -39,11 +39,13 @@ class Config:
             # ============================================================
             # SQLite 数据库配置
             # ============================================================
-            # SQLite 数据库文件路径
+            # SQLite 数据库文件路径（放在项目根目录）
             sqlite_db_path = os.environ.get('SQLITE_DB_PATH', 'app.db')
-            # 如果路径是相对路径，转换为绝对路径
+            # 如果路径是相对路径，放在项目根目录（src的父目录）
             if not os.path.isabs(sqlite_db_path):
-                sqlite_db_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), sqlite_db_path)
+                # 获取项目根目录（src的父目录）
+                project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+                sqlite_db_path = os.path.join(project_root, sqlite_db_path)
             SQLALCHEMY_DATABASE_URI = f'sqlite:///{sqlite_db_path}'
         
         else:

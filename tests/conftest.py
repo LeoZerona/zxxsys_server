@@ -1,9 +1,9 @@
 """Pytest 配置和 fixtures"""
 import pytest
 import os
-from app import app, db
-from models import User, EmailVerification
-from email_service import init_mail
+from src.app import app
+from src.models import db, User, EmailVerification
+from src.email_service import init_mail
 
 @pytest.fixture
 def client():

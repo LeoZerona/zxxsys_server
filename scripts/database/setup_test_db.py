@@ -1,6 +1,6 @@
 """在 test 数据库中创建表的通用脚本"""
 from flask import Flask
-from models import db, User, EmailVerification
+from src.models import db, User, EmailVerification
 
 # ============================================================================
 # 数据库配置 - 请根据你的实际情况修改

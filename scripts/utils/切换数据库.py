@@ -5,7 +5,7 @@ import os
 
 def show_current_config():
     """显示当前数据库配置"""
-    from config import Config
+    from src.config import Config
     db_uri = Config.SQLALCHEMY_DATABASE_URI
     db_type = 'MySQL' if 'mysql' in db_uri.lower() else 'SQLite' if 'sqlite' in db_uri.lower() else 'Unknown'
     

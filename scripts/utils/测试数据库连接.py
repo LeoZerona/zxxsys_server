@@ -1,8 +1,8 @@
 """
 测试 MySQL 数据库连接
 """
-from app import app, db
-from models import User
+from src.app import app, db
+from src.models import User
 
 with app.app_context():
     print("="*80)

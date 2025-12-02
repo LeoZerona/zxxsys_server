@@ -1,6 +1,6 @@
 """直接生成 users 表的脚本"""
 from flask import Flask
-from models import db, User
+from src.models import db, User
 from sqlalchemy import inspect, text
 
 # ============================================================================

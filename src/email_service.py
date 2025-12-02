@@ -4,7 +4,7 @@ import string
 from datetime import datetime, timedelta
 from flask import current_app
 from flask_mail import Mail, Message
-from models import db, EmailVerification
+from src.models import db, EmailVerification
 
 mail = Mail()
 

@@ -1,5 +1,5 @@
 """检查当前数据库配置"""
-from config import Config
+from src.config import Config
 
 print("="*80)
 print("📊 当前数据库配置")

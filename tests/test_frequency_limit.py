@@ -1,9 +1,9 @@
 """测试验证码发送频率限制"""
 import pytest
 import time
-from app import app, db
-from models import EmailVerification
-from email_service import send_verification_code
+from src.app import app, db
+from src.models import EmailVerification
+from src.email_service import send_verification_code
 
 class TestVerificationCodeFrequencyLimit:
     """测试验证码发送频率限制"""

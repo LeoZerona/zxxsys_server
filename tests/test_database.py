@@ -1,7 +1,7 @@
 """数据库连接和操作测试"""
 import pytest
-from app import app, db
-from models import User, EmailVerification
+from src.app import app, db
+from src.models import User, EmailVerification
 
 class TestDatabaseConnection:
     """测试数据库连接"""

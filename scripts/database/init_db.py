@@ -1,6 +1,6 @@
 """数据库初始化脚本"""
-from app import app
-from models import db
+from src.app import app
+from src.models import db
 
 with app.app_context():
     # 创建所有表

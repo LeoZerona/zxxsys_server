@@ -9,7 +9,7 @@ import string
 import os
 from datetime import datetime
 from flask import Flask
-from models import db, User, EmailVerification
+from src.models import db, User, EmailVerification
 
 # 创建 Flask 应用实例（使用 MySQL test 数据库）
 app = Flask(__name__)

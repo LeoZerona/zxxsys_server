@@ -1,6 +1,6 @@
 """查看 email_verifications 表的数据"""
-from app import app, db
-from models import EmailVerification
+from src.app import app, db
+from src.models import EmailVerification
 from datetime import datetime
 
 with app.app_context():

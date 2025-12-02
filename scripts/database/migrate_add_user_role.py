@@ -1,6 +1,6 @@
 """数据库迁移脚本：添加用户权限字段"""
-from app import app, db
-from models import User
+from src.app import app, db
+from src.models import User
 
 def migrate_add_role():
     """添加用户权限字段"""

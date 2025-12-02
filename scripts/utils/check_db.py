@@ -1,6 +1,6 @@
 """检查数据库配置和用户数据"""
-from app import app, db
-from models import User
+from src.app import app, db
+from src.models import User
 
 with app.app_context():
     print("=" * 60)

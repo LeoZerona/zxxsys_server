@@ -1,9 +1,9 @@
 """邮箱服务测试"""
 import pytest
 from datetime import datetime, timedelta
-from app import app, db
-from models import EmailVerification
-from email_service import generate_verification_code, send_verification_code, verify_code
+from src.app import app, db
+from src.models import EmailVerification
+from src.email_service import generate_verification_code, send_verification_code, verify_code
 
 class TestEmailVerificationCode:
     """测试邮箱验证码功能"""

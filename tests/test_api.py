@@ -1,8 +1,8 @@
 """API 接口测试"""
 import pytest
 import json
-from app import app, db
-from models import User, EmailVerification
+from src.app import app, db
+from src.models import User, EmailVerification
 
 class TestHealthCheck:
     """测试健康检查接口"""
@@ -36,7 +36,7 @@ class TestRegisterAPI:
         else:
             # 从数据库获取
             with app.app_context():
-                from models import EmailVerification
+                from src.models import EmailVerification
                 verification = EmailVerification.query.filter_by(
                     email=sample_user['email']
                 ).first()

@@ -1,48 +1,23 @@
 """
-查询 MySQL test 数据库中的 users 表数据
+查询数据库中用户表的详细数据
 """
-from flask import Flask
-from models import db, User
+from src.app import app, db
+from src.models import User
 from datetime import datetime
-
-# 创建 Flask 应用实例（使用 MySQL test 数据库）
-app = Flask(__name__)
-
-# 配置 MySQL test 数据库（与 create_users_table.py 保持一致）
-mysql_user = 'root'
-mysql_password = '123456'  # 请根据你的实际情况修改
-mysql_host = 'localhost'
-mysql_port = '3306'
-
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/test?charset=utf8mb4'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-# 初始化数据库
-db.init_app(app)
 
 with app.app_context():
     print("="*80)
-    print("📊 MySQL test 数据库 - 用户表查询结果")
+    print("📊 数据库用户表查询结果")
     print("="*80)
     print(f"⏰ 查询时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"📁 数据库: MySQL")
-    print(f"📊 数据库名: test")
-    print(f"🔗 连接: {mysql_user}@{mysql_host}:{mysql_port}")
+    print(f"📁 数据库 URI: {app.config['SQLALCHEMY_DATABASE_URI']}")
     print()
     
     try:
-        # 测试数据库连接
-        with db.engine.connect() as conn:
-            result = conn.execute(db.text("SELECT DATABASE()"))
-            current_db = result.scalar()
-            print(f"✅ 数据库连接成功!")
-            print(f"   当前数据库: {current_db}")
-        
         # 查询所有用户
         users = User.query.order_by(User.id.asc()).all()
         total_count = len(users)
         
-        print()
         print(f"📈 当前用户总数: {total_count}")
         print()
         
@@ -92,29 +67,13 @@ with app.app_context():
                 print(f"   - 最新注册: {newest.created_at} ({newest.email})")
             
         else:
-            print("⚠️  MySQL test 数据库的 users 表中没有用户数据")
-            print()
-            print("💡 提示:")
-            print("   - 如果之前注册的用户数据在 SQLite 数据库中，需要重新注册")
-            print("   - 或者需要将 SQLite 中的数据迁移到 MySQL")
+            print("⚠️  数据库中没有用户数据")
         
         print()
         print("="*80)
         
     except Exception as e:
-        print(f"❌ 连接或查询数据库时出错: {str(e)}")
-        print()
-        print("💡 可能的原因:")
-        print("   1. MySQL 服务未启动")
-        print("   2. 数据库连接信息不正确（用户名、密码、主机、端口）")
-        print("   3. test 数据库不存在")
-        print("   4. users 表不存在")
-        print()
-        print("🔧 解决方法:")
-        print("   1. 检查 MySQL 服务是否运行")
-        print("   2. 检查数据库连接信息是否正确")
-        print("   3. 确认 test 数据库已创建")
-        print("   4. 如果 users 表不存在，运行: python create_users_table.py")
+        print(f"❌ 查询数据库时出错: {str(e)}")
         import traceback
         traceback.print_exc()
 
