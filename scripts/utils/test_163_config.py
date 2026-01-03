@@ -1,5 +1,5 @@
 """检查邮箱配置（支持所有邮箱服务商）"""
-from app import app
+from src.app import app
 
 print("=" * 60)
 print("邮箱配置检查")

@@ -128,4 +128,8 @@ class Config:
         'user': '普通用户'
     }
     DEFAULT_USER_ROLE = 'user'  # 默认用户权限
+    
+    # 登录失败限制配置
+    LOGIN_FAIL_LIMIT = int(os.environ.get('LOGIN_FAIL_LIMIT', 10))  # 登录失败次数限制（默认10次）
+    LOGIN_FAIL_WINDOW_MINUTES = int(os.environ.get('LOGIN_FAIL_WINDOW_MINUTES', 10))  # 时间窗口（分钟，默认10分钟）
 

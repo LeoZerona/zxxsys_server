@@ -1,0 +1,5426 @@
+{
+  "task_id": 1,
+  "current_group_index": 2,
+  "total_groups": 537,
+  "processed_groups": 2,
+  "current_group": null,
+  "status": "pending",
+  "last_update": "2026-01-03T16:14:26.524314",
+  "groups": [
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 215,
+      "subject_name": "中国近现代史纲要(15043)",
+      "channel_code": "zxx",
+      "count": 1162
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 141,
+      "subject_name": "管理系统中计算机应用(00051)",
+      "channel_code": "zxx",
+      "count": 1012
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 216,
+      "subject_name": "马克思主义基本原理概论(03709)",
+      "channel_code": "zxx",
+      "count": 946
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 190,
+      "subject_name": "中国古代文学史(一)(00538)",
+      "channel_code": "zxx",
+      "count": 891
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 189,
+      "subject_name": "中国现代文学史(00537)",
+      "channel_code": "zxx",
+      "count": 880
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 144,
+      "subject_name": "市场营销学(00058)",
+      "channel_code": "zxx",
+      "count": 876
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 355,
+      "subject_name": "古代汉语(00536)",
+      "channel_code": "zxx",
+      "count": 796
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 192,
+      "subject_name": "外国文学史(00540)",
+      "channel_code": "zxx",
+      "count": 790
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 237,
+      "subject_name": "毛泽东思想和中国特色社会主义理论体系概论(12656)",
+      "channel_code": "zxx",
+      "count": 775
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 181,
+      "subject_name": "学前教育原理(00398)",
+      "channel_code": "zxx",
+      "count": 664
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 193,
+      "subject_name": "语言学概论(00541)",
+      "channel_code": "zxx",
+      "count": 661
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 138,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 656
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 139,
+      "subject_name": "美学(00037)",
+      "channel_code": "zxx",
+      "count": 622
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 176,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 619
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 284,
+      "subject_name": "急救护理学(03007)",
+      "channel_code": "zxx",
+      "count": 610
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 256,
+      "subject_name": "幼儿园组织与管理(13147)",
+      "channel_code": "zxx",
+      "count": 610
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 172,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 596
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 286,
+      "subject_name": "内科护理学(本)(13204)",
+      "channel_code": "zxx",
+      "count": 568
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 186,
+      "subject_name": "发展与教育心理学(00466)",
+      "channel_code": "zxx",
+      "count": 566
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 175,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 565
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 200,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 565
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 191,
+      "subject_name": "中国古代文学史(二)(00539)",
+      "channel_code": "zxx",
+      "count": 562
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 177,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 561
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 201,
+      "subject_name": "社区护理学(13198)",
+      "channel_code": "zxx",
+      "count": 561
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 155,
+      "subject_name": "组织行为学(00152)",
+      "channel_code": "zxx",
+      "count": 558
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 164,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 543
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 145,
+      "subject_name": "(00067)财务管理",
+      "channel_code": "zxx",
+      "count": 538
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 202,
+      "subject_name": "护理教育导论(03005)",
+      "channel_code": "zxx",
+      "count": 521
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 159,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 510
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 168,
+      "subject_name": "行政法学(00261)",
+      "channel_code": "zxx",
+      "count": 500
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 173,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 497
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 207,
+      "subject_name": "护理学导论(03201)",
+      "channel_code": "zxx",
+      "count": 495
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 250,
+      "subject_name": "设计心理学(04848)",
+      "channel_code": "zxx",
+      "count": 495
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 156,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 491
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 244,
+      "subject_name": "(00813)外国作家作品专题研究",
+      "channel_code": "zxx",
+      "count": 490
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 174,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 479
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 187,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 479
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 213,
+      "subject_name": "学前教育研究方法(13213)",
+      "channel_code": "zxx",
+      "count": 465
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 140,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 460
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 204,
+      "subject_name": "护理学研究(03008)",
+      "channel_code": "zxx",
+      "count": 459
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 233,
+      "subject_name": "学前儿童发展(12340)",
+      "channel_code": "zxx",
+      "count": 459
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 207,
+      "subject_name": "护理学导论(03201)",
+      "channel_code": "zxx",
+      "count": 458
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 242,
+      "subject_name": "外科护理学(本)(13206)",
+      "channel_code": "zxx",
+      "count": 452
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 214,
+      "subject_name": "思想道德修养与法律基础(03706)",
+      "channel_code": "zxx",
+      "count": 449
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 179,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 448
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 169,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 440
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 355,
+      "subject_name": "古代汉语(00536)",
+      "channel_code": "zxx",
+      "count": 438
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 151,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 418
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 152,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 417
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 149,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 416
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 285,
+      "subject_name": "预防医学(13203)",
+      "channel_code": "zxx",
+      "count": 404
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 202,
+      "subject_name": "护理教育导论(03005)",
+      "channel_code": "zxx",
+      "count": 403
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 203,
+      "subject_name": "护理管理学(03006)",
+      "channel_code": "zxx",
+      "count": 399
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 153,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 397
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 165,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 389
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 215,
+      "subject_name": "中国近现代史纲要(03708)",
+      "channel_code": "zxx",
+      "count": 388
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 183,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 384
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 357,
+      "subject_name": "材料加工和成型工艺(00699)",
+      "channel_code": "zxx",
+      "count": 380
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 141,
+      "subject_name": "管理系统中计算机应用(00051)",
+      "channel_code": "zxx",
+      "count": 375
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 257,
+      "subject_name": "学前儿童家庭与社区教育(14494)",
+      "channel_code": "zxx",
+      "count": 373
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 285,
+      "subject_name": "预防医学(13203)",
+      "channel_code": "zxx",
+      "count": 371
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 170,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 367
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 232,
+      "subject_name": "幼儿园教育基础(12339)",
+      "channel_code": "zxx",
+      "count": 364
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 219,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 360
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 201,
+      "subject_name": "社区护理学(13198)",
+      "channel_code": "zxx",
+      "count": 354
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 288,
+      "subject_name": "老年护理学(04435)",
+      "channel_code": "zxx",
+      "count": 347
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 163,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 339
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 180,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 338
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 161,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 334
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 146,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 333
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 171,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 333
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 180,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 331
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 318,
+      "subject_name": "学前教育史(00402)",
+      "channel_code": "zxx",
+      "count": 322
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 199,
+      "subject_name": "学前教育心理学(00882)",
+      "channel_code": "zxx",
+      "count": 322
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 143,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 319
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 185,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 319
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 353,
+      "subject_name": "中外电影史(03511)",
+      "channel_code": "zxx",
+      "count": 319
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 216,
+      "subject_name": "马克思主义基本原理概论(03709)",
+      "channel_code": "zxx",
+      "count": 318
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 184,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 315
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 301,
+      "subject_name": "管理会计(08119)",
+      "channel_code": "zxx",
+      "count": 311
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 204,
+      "subject_name": "护理学研究(03008)",
+      "channel_code": "zxx",
+      "count": 300
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 284,
+      "subject_name": "急救护理学(03007)",
+      "channel_code": "zxx",
+      "count": 297
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 160,
+      "subject_name": "(00159)高级财务会计",
+      "channel_code": "zxx",
+      "count": 296
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 264,
+      "subject_name": "小学综合性学习与跨学科教学(14462)",
+      "channel_code": "zxx",
+      "count": 291
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 154,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 290
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 219,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 287
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 286,
+      "subject_name": "内科护理学(本)(13204)",
+      "channel_code": "zxx",
+      "count": 286
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 208,
+      "subject_name": "内科护理学（二）(03202)",
+      "channel_code": "zxx",
+      "count": 285
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 301,
+      "subject_name": "管理会计(08119)",
+      "channel_code": "zxx",
+      "count": 284
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 286,
+      "subject_name": "内科护理学(本)(13204)",
+      "channel_code": "zxx",
+      "count": 282
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 206,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 280
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 184,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 280
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 144,
+      "subject_name": "市场营销学(00058)",
+      "channel_code": "zxx",
+      "count": 279
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 291,
+      "subject_name": "管理学原理(中级)(13683)",
+      "channel_code": "zxx",
+      "count": 278
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 177,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 276
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 260,
+      "subject_name": "学前儿童发展的观察与评价(14492)",
+      "channel_code": "zxx",
+      "count": 275
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 155,
+      "subject_name": "组织行为学(00152)",
+      "channel_code": "zxx",
+      "count": 274
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 290,
+      "subject_name": "经济学原理(中级)(13887)",
+      "channel_code": "zxx",
+      "count": 272
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 271,
+      "subject_name": "中国书法史(05454)",
+      "channel_code": "zxx",
+      "count": 271
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 181,
+      "subject_name": "学前教育原理(00398)",
+      "channel_code": "zxx",
+      "count": 270
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 266,
+      "subject_name": "小学课堂教学案例评析(09280)",
+      "channel_code": "zxx",
+      "count": 270
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 173,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 268
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 145,
+      "subject_name": "财务管理(00067)",
+      "channel_code": "zxx",
+      "count": 265
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 193,
+      "subject_name": "语言学概论(00541)",
+      "channel_code": "zxx",
+      "count": 263
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 153,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 260
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 240,
+      "subject_name": "幼儿园教育活动设计与组织(30002)",
+      "channel_code": "zxx",
+      "count": 260
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 242,
+      "subject_name": "外科护理学(本)(13206)",
+      "channel_code": "zxx",
+      "count": 257
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 298,
+      "subject_name": "国际商务谈判(00186)",
+      "channel_code": "zxx",
+      "count": 256
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 189,
+      "subject_name": "中国现代文学史(00537)",
+      "channel_code": "zxx",
+      "count": 255
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 203,
+      "subject_name": "护理管理学(03006)",
+      "channel_code": "zxx",
+      "count": 254
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 237,
+      "subject_name": "毛泽东思想和中国特色社会主义理论体系概论(12656)",
+      "channel_code": "zxx",
+      "count": 252
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 360,
+      "subject_name": "工业设计史论(13658)",
+      "channel_code": "zxx",
+      "count": 250
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 192,
+      "subject_name": "外国文学史(00540)",
+      "channel_code": "zxx",
+      "count": 247
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 218,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 247
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 179,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 247
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 205,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 243
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 156,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 239
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 279,
+      "subject_name": "(00323)西方行政学说史",
+      "channel_code": "zxx",
+      "count": 239
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 220,
+      "subject_name": "绩效管理(13811)",
+      "channel_code": "zxx",
+      "count": 236
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 206,
+      "subject_name": "预防医学（二）(03200)",
+      "channel_code": "zxx",
+      "count": 235
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 352,
+      "subject_name": "剧本写作(03512)",
+      "channel_code": "zxx",
+      "count": 234
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 244,
+      "subject_name": "外国作家作品专题研究(00813)",
+      "channel_code": "zxx",
+      "count": 234
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 183,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 233
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 361,
+      "subject_name": "计算机辅助产品设计(13799)",
+      "channel_code": "zxx",
+      "count": 233
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 224,
+      "subject_name": "(06091)薪酬管理",
+      "channel_code": "zxx",
+      "count": 230
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 474,
+      "subject_name": "习近平新时代中国特色社会主义思想概论(15040)",
+      "channel_code": "zxx",
+      "count": 230
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 154,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 229
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 378,
+      "subject_name": "生物化学(食品工程)(14204)",
+      "channel_code": "zxx",
+      "count": 227
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 192,
+      "subject_name": "外国文学史(00540)",
+      "channel_code": "zxx",
+      "count": 226
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 144,
+      "subject_name": "市场营销学(00058)",
+      "channel_code": "zxx",
+      "count": 226
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 186,
+      "subject_name": "发展与教育心理学(00466)",
+      "channel_code": "zxx",
+      "count": 224
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 204,
+      "subject_name": "护理学研究(03008)",
+      "channel_code": "zxx",
+      "count": 221
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 222,
+      "subject_name": "劳动关系与劳动法(13967)",
+      "channel_code": "zxx",
+      "count": 221
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 175,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 220
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 166,
+      "subject_name": "高级财务管理(00207)",
+      "channel_code": "zxx",
+      "count": 220
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 190,
+      "subject_name": "中国古代文学史(一)(00538)",
+      "channel_code": "zxx",
+      "count": 219
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 185,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 215
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 199,
+      "subject_name": "学前教育心理学(00882)",
+      "channel_code": "zxx",
+      "count": 214
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 256,
+      "subject_name": "幼儿园组织与管理(13147)",
+      "channel_code": "zxx",
+      "count": 213
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 202,
+      "subject_name": "护理教育导论(03005)",
+      "channel_code": "zxx",
+      "count": 211
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 171,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 210
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 223,
+      "subject_name": "(14112)人员素质测评理论与方法",
+      "channel_code": "zxx",
+      "count": 210
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 288,
+      "subject_name": "老年护理学(04435)",
+      "channel_code": "zxx",
+      "count": 206
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 259,
+      "subject_name": "学前儿童艺术教育(30005)",
+      "channel_code": "zxx",
+      "count": 206
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 214,
+      "subject_name": "思想道德修养与法律基础(03706)",
+      "channel_code": "zxx",
+      "count": 205
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 189,
+      "subject_name": "中国现代文学史(00537)",
+      "channel_code": "zxx",
+      "count": 203
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 249,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 200
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 174,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 198
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 165,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 197
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 208,
+      "subject_name": "内科护理学（二）(03202)",
+      "channel_code": "zxx",
+      "count": 197
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 380,
+      "subject_name": "食品分析(03277)",
+      "channel_code": "zxx",
+      "count": 196
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 318,
+      "subject_name": "学前教育史(00402)",
+      "channel_code": "zxx",
+      "count": 192
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 299,
+      "subject_name": "财务会计(中级)(13140)",
+      "channel_code": "zxx",
+      "count": 192
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 140,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 191
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 248,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 191
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 258,
+      "subject_name": "学前儿童健康教育(30004)",
+      "channel_code": "zxx",
+      "count": 191
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 256,
+      "subject_name": "幼儿园组织与管理(13147)",
+      "channel_code": "zxx",
+      "count": 190
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 178,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 189
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 191,
+      "subject_name": "中国古代文学史(二)(00539)",
+      "channel_code": "zxx",
+      "count": 189
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 300,
+      "subject_name": "财务分析(13316)",
+      "channel_code": "zxx",
+      "count": 187
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 286,
+      "subject_name": "内科护理学(本)(13204)",
+      "channel_code": "zxx",
+      "count": 185
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 199,
+      "subject_name": "学前教育心理学(00882)",
+      "channel_code": "zxx",
+      "count": 185
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 242,
+      "subject_name": "外科护理学(本)(13206)",
+      "channel_code": "zxx",
+      "count": 183
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 139,
+      "subject_name": "美学(00037)",
+      "channel_code": "zxx",
+      "count": 181
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 176,
+      "subject_name": "领导科学(00320)",
+      "channel_code": "zxx",
+      "count": 181
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 165,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 180
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 170,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 180
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 357,
+      "subject_name": "材料加工和成型工艺(00699)",
+      "channel_code": "zxx",
+      "count": 180
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 139,
+      "subject_name": "美学(00037)",
+      "channel_code": "zxx",
+      "count": 179
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 295,
+      "subject_name": "人力资源管理(中级)(14104)",
+      "channel_code": "zxx",
+      "count": 179
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 358,
+      "subject_name": "产品开发设计(00703)",
+      "channel_code": "zxx",
+      "count": 179
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 263,
+      "subject_name": "小学教育研究方法(14448)",
+      "channel_code": "zxx",
+      "count": 178
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 287,
+      "subject_name": "外科护理学(本)(13206)",
+      "channel_code": "zxx",
+      "count": 177
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 152,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 176
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 209,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 175
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 273,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 171
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 248,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 171
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 169,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 170
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 171,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 170
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 249,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 170
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 233,
+      "subject_name": "学前儿童发展(12340)",
+      "channel_code": "zxx",
+      "count": 168
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 359,
+      "subject_name": "产品设计程序与方法(04851)",
+      "channel_code": "zxx",
+      "count": 168
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 161,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 166
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 168,
+      "subject_name": "行政法学(00261)",
+      "channel_code": "zxx",
+      "count": 166
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 279,
+      "subject_name": "(00323)西方行政学说史",
+      "channel_code": "zxx",
+      "count": 166
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 190,
+      "subject_name": "中国古代文学史(一)(00538)",
+      "channel_code": "zxx",
+      "count": 165
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 251,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 165
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 228,
+      "subject_name": "教师职业道德与专业发展(09277)",
+      "channel_code": "zxx",
+      "count": 164
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 262,
+      "subject_name": "小学教育管理(14445)",
+      "channel_code": "zxx",
+      "count": 161
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 188,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 160
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 188,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 160
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 188,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 160
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 193,
+      "subject_name": "(00541)语言学概论",
+      "channel_code": "zxx",
+      "count": 159
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 298,
+      "subject_name": "国际商务谈判(00186)",
+      "channel_code": "zxx",
+      "count": 156
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 273,
+      "subject_name": "(00821)现代汉语语法研究",
+      "channel_code": "zxx",
+      "count": 156
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 172,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 155
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 247,
+      "subject_name": "动漫艺术概论(01685)",
+      "channel_code": "zxx",
+      "count": 154
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 143,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 152
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 164,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 150
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 173,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 149
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 194,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 149
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 200,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 148
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 147,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 145
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 205,
+      "subject_name": "精神障碍护理学(03009)",
+      "channel_code": "zxx",
+      "count": 144
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 175,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 143
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 195,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 142
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 301,
+      "subject_name": "管理会计(08119)",
+      "channel_code": "zxx",
+      "count": 142
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 227,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 141
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 285,
+      "subject_name": "(13203)预防医学",
+      "channel_code": "zxx",
+      "count": 141
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 352,
+      "subject_name": "剧本写作(03512)",
+      "channel_code": "zxx",
+      "count": 141
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 264,
+      "subject_name": "小学综合性学习与跨学科教学(14462)",
+      "channel_code": "zxx",
+      "count": 141
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 226,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 140
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 271,
+      "subject_name": "中国书法史(05454)",
+      "channel_code": "zxx",
+      "count": 138
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 291,
+      "subject_name": "(13683)管理学原理(中级)",
+      "channel_code": "zxx",
+      "count": 137
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 151,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 136
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 302,
+      "subject_name": "统计学概论(05087)",
+      "channel_code": "zxx",
+      "count": 135
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 159,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 134
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 161,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 134
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 226,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 134
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 169,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 133
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 268,
+      "subject_name": "基础教育改革概论(07529)",
+      "channel_code": "zxx",
+      "count": 131
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 145,
+      "subject_name": "(00067)财务管理",
+      "channel_code": "zxx",
+      "count": 130
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 380,
+      "subject_name": "(03277)食品分析",
+      "channel_code": "zxx",
+      "count": 129
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 187,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 126
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 182,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 126
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 224,
+      "subject_name": "(06091)薪酬管理",
+      "channel_code": "zxx",
+      "count": 125
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 176,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 125
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 208,
+      "subject_name": "内科护理学（二）(03202)",
+      "channel_code": "zxx",
+      "count": 125
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 241,
+      "subject_name": "幼儿游戏的支持与指导(14601)",
+      "channel_code": "zxx",
+      "count": 125
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 317,
+      "subject_name": "幼儿游戏的支持与指导(14601)",
+      "channel_code": "zxx",
+      "count": 125
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 254,
+      "subject_name": "幼儿游戏理论与指导(14603)",
+      "channel_code": "zxx",
+      "count": 125
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 135,
+      "subject_name": "英语（专升本）(13000)",
+      "channel_code": "zxx",
+      "count": 124
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 352,
+      "subject_name": "剧本写作(03512)",
+      "channel_code": "zxx",
+      "count": 122
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 220,
+      "subject_name": "绩效管理(13811)",
+      "channel_code": "zxx",
+      "count": 121
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 146,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 120
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 155,
+      "subject_name": "组织行为学(00152)",
+      "channel_code": "zxx",
+      "count": 120
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 234,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 120
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 210,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 120
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 236,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 119
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 170,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 119
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 174,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 118
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 262,
+      "subject_name": "小学教育管理(14445)",
+      "channel_code": "zxx",
+      "count": 118
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 380,
+      "subject_name": "(03277)食品分析",
+      "channel_code": "zxx",
+      "count": 117
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 149,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 116
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 225,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 115
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 177,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 115
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 207,
+      "subject_name": "护理学导论(03201)",
+      "channel_code": "zxx",
+      "count": 114
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 203,
+      "subject_name": "护理管理学(03006)",
+      "channel_code": "zxx",
+      "count": 113
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 265,
+      "subject_name": "小学教师专业发展(14444)",
+      "channel_code": "zxx",
+      "count": 113
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 250,
+      "subject_name": "设计心理学(04848)",
+      "channel_code": "zxx",
+      "count": 112
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 284,
+      "subject_name": "急救护理学(03007)",
+      "channel_code": "zxx",
+      "count": 110
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 194,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 110
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 143,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 108
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 143,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 107
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 355,
+      "subject_name": "(00536)古代汉语",
+      "channel_code": "zxx",
+      "count": 106
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 265,
+      "subject_name": "(14444)小学教师专业发展",
+      "channel_code": "zxx",
+      "count": 106
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 383,
+      "subject_name": "食品工艺学(02520)",
+      "channel_code": "zxx",
+      "count": 106
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 290,
+      "subject_name": "(13887)经济学原理(中级)",
+      "channel_code": "zxx",
+      "count": 106
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 217,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 105
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 140,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 105
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 154,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 105
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 164,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 105
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 200,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 105
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 257,
+      "subject_name": "学前儿童家庭与社区教育(14494)",
+      "channel_code": "zxx",
+      "count": 104
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 223,
+      "subject_name": "(14112)人员素质测评理论与方法",
+      "channel_code": "zxx",
+      "count": 104
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 250,
+      "subject_name": "设计心理学(04848)",
+      "channel_code": "zxx",
+      "count": 103
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 154,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 102
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 225,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 102
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 384,
+      "subject_name": "食品机械与设备(03279)",
+      "channel_code": "zxx",
+      "count": 101
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 148,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 100
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 228,
+      "subject_name": "教师职业道德与专业发展(09277)",
+      "channel_code": "zxx",
+      "count": 100
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 257,
+      "subject_name": "学前儿童家庭与社区教育(14494)",
+      "channel_code": "zxx",
+      "count": 100
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 377,
+      "subject_name": "有机化学(14591)",
+      "channel_code": "zxx",
+      "count": 100
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 153,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 99
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 156,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 99
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 157,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 99
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 172,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 99
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 239,
+      "subject_name": "学前儿童保育学(30001)",
+      "channel_code": "zxx",
+      "count": 99
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 299,
+      "subject_name": "(13140)财务会计(中级)",
+      "channel_code": "zxx",
+      "count": 99
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 141,
+      "subject_name": "(00051)管理系统中计算机应用",
+      "channel_code": "zxx",
+      "count": 97
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 383,
+      "subject_name": "食品工艺学(02520)",
+      "channel_code": "zxx",
+      "count": 97
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 285,
+      "subject_name": "预防医学(13203)",
+      "channel_code": "zxx",
+      "count": 96
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 353,
+      "subject_name": "中外电影史(03511)",
+      "channel_code": "zxx",
+      "count": 96
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 266,
+      "subject_name": "(09280)小学课堂教学案例评析",
+      "channel_code": "zxx",
+      "count": 96
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 191,
+      "subject_name": "中国古代文学史(二)(00539)",
+      "channel_code": "zxx",
+      "count": 95
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 247,
+      "subject_name": "动漫艺术概论(01685)",
+      "channel_code": "zxx",
+      "count": 95
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 291,
+      "subject_name": "管理学原理(中级)(13683)",
+      "channel_code": "zxx",
+      "count": 94
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 382,
+      "subject_name": "食品标准与法规(01965)",
+      "channel_code": "zxx",
+      "count": 93
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 160,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 91
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 385,
+      "subject_name": "食品添加剂(04175)",
+      "channel_code": "zxx",
+      "count": 91
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 146,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 90
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 195,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 90
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 358,
+      "subject_name": "产品开发设计(00703)",
+      "channel_code": "zxx",
+      "count": 90
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 302,
+      "subject_name": "(05087)统计学概论",
+      "channel_code": "zxx",
+      "count": 90
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 219,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 89
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 240,
+      "subject_name": "幼儿园教育活动设计与组织(30002)",
+      "channel_code": "zxx",
+      "count": 89
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 166,
+      "subject_name": "高级财务管理(00207)",
+      "channel_code": "zxx",
+      "count": 89
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 258,
+      "subject_name": "学前儿童健康教育(30004)",
+      "channel_code": "zxx",
+      "count": 89
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 273,
+      "subject_name": "现代汉语语法研究(00821)",
+      "channel_code": "zxx",
+      "count": 89
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 138,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 88
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 360,
+      "subject_name": "工业设计史论(13658)",
+      "channel_code": "zxx",
+      "count": 87
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 186,
+      "subject_name": "发展与教育心理学(00466)",
+      "channel_code": "zxx",
+      "count": 86
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 149,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 85
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 149,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 85
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 151,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 85
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 234,
+      "subject_name": "学前教育政策与法规(12344)",
+      "channel_code": "zxx",
+      "count": 84
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 213,
+      "subject_name": "学前教育研究方法(13213)",
+      "channel_code": "zxx",
+      "count": 84
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 146,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 83
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 159,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 83
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 288,
+      "subject_name": "老年护理学(04435)",
+      "channel_code": "zxx",
+      "count": 83
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 232,
+      "subject_name": "幼儿园教育基础(12339)",
+      "channel_code": "zxx",
+      "count": 83
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 385,
+      "subject_name": "食品添加剂(04175)",
+      "channel_code": "zxx",
+      "count": 83
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 295,
+      "subject_name": "(14104)人力资源管理(中级)",
+      "channel_code": "zxx",
+      "count": 82
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 399,
+      "subject_name": "知识产权法(00226)",
+      "channel_code": "zxx",
+      "count": 82
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 152,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 81
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 287,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 81
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 378,
+      "subject_name": "生物化学(食品工程)(14204)",
+      "channel_code": "zxx",
+      "count": 81
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 168,
+      "subject_name": "行政法学(00261)",
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 185,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 385,
+      "subject_name": "食品添加剂(04175)",
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 381,
+      "subject_name": "(04991)食品保藏原理与技术",
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 398,
+      "subject_name": "侵权责任法(14081)",
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 400,
+      "subject_name": "(13749)环境资源法学",
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 387,
+      "subject_name": "(02517)食品微生物学",
+      "channel_code": "zxx",
+      "count": 80
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 236,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 78
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 287,
+      "subject_name": "外科护理学(本)(13206)",
+      "channel_code": "zxx",
+      "count": 78
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 227,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 76
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 260,
+      "subject_name": "学前儿童发展的观察与评价(14492)",
+      "channel_code": "zxx",
+      "count": 76
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 239,
+      "subject_name": "学前儿童保育学(30001)",
+      "channel_code": "zxx",
+      "count": 75
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 160,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 74
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 384,
+      "subject_name": "食品机械与设备(03279)",
+      "channel_code": "zxx",
+      "count": 74
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 383,
+      "subject_name": "食品工艺学(02520)",
+      "channel_code": "zxx",
+      "count": 74
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 213,
+      "subject_name": "(13213)学前教育研究方法",
+      "channel_code": "zxx",
+      "count": 74
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 300,
+      "subject_name": "财务分析(13316)",
+      "channel_code": "zxx",
+      "count": 73
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 264,
+      "subject_name": "小学综合性学习与跨学科教学(14462)",
+      "channel_code": "zxx",
+      "count": 73
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 377,
+      "subject_name": "有机化学(14591)",
+      "channel_code": "zxx",
+      "count": 73
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 224,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 72
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 259,
+      "subject_name": "学前儿童艺术教育(30005)",
+      "channel_code": "zxx",
+      "count": 72
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 379,
+      "subject_name": "食品工程(03262)",
+      "channel_code": "zxx",
+      "count": 72
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 228,
+      "subject_name": "教师职业道德与专业发展(09277)",
+      "channel_code": "zxx",
+      "count": 71
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 218,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 70
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 353,
+      "subject_name": "中外电影史(03511)",
+      "channel_code": "zxx",
+      "count": 70
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 222,
+      "subject_name": "劳动关系与劳动法(13967)",
+      "channel_code": "zxx",
+      "count": 70
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 381,
+      "subject_name": "食品保藏原理与技术(04991)",
+      "channel_code": "zxx",
+      "count": 70
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 361,
+      "subject_name": "(13799)计算机辅助产品设计",
+      "channel_code": "zxx",
+      "count": 70
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 269,
+      "subject_name": "(14458)小学英语教学研究",
+      "channel_code": "zxx",
+      "count": 69
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 378,
+      "subject_name": "生物化学(食品工程)(14204)",
+      "channel_code": "zxx",
+      "count": 69
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 206,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 68
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 359,
+      "subject_name": "产品设计程序与方法(04851)",
+      "channel_code": "zxx",
+      "count": 68
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 163,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 65
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 298,
+      "subject_name": "(00186)国际商务谈判",
+      "channel_code": "zxx",
+      "count": 65
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 266,
+      "subject_name": "小学课堂教学案例评析(09280)",
+      "channel_code": "zxx",
+      "count": 64
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 379,
+      "subject_name": "食品工程(03262)",
+      "channel_code": "zxx",
+      "count": 62
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 250,
+      "subject_name": "设计心理学(04848)",
+      "channel_code": "zxx",
+      "count": 61
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 217,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 60
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 309,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 60
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 162,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 60
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 163,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 60
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 210,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 60
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 184,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 60
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 178,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 57
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 381,
+      "subject_name": "(04991)食品保藏原理与技术",
+      "channel_code": "zxx",
+      "count": 57
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 148,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 55
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 201,
+      "subject_name": "(13198)社区护理学",
+      "channel_code": "zxx",
+      "count": 55
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 241,
+      "subject_name": "幼儿游戏的支持与指导(14601)",
+      "channel_code": "zxx",
+      "count": 55
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 387,
+      "subject_name": "(02517)食品微生物学",
+      "channel_code": "zxx",
+      "count": 55
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 209,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 54
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 379,
+      "subject_name": "食品工程(03262)",
+      "channel_code": "zxx",
+      "count": 54
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 249,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 52
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 267,
+      "subject_name": "中小学教育政策法规(07472)",
+      "channel_code": "zxx",
+      "count": 51
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 303,
+      "subject_name": "审计学原理(06069)",
+      "channel_code": "zxx",
+      "count": 51
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 277,
+      "subject_name": "(05722)公共经济学",
+      "channel_code": "zxx",
+      "count": 51
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 148,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 221,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 138,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 317,
+      "subject_name": "幼儿游戏的支持与指导(14601)",
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 254,
+      "subject_name": "幼儿游戏理论与指导(14603)",
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 303,
+      "subject_name": "审计学原理(06069)",
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 382,
+      "subject_name": "(01965)食品标准与法规",
+      "channel_code": "zxx",
+      "count": 50
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 382,
+      "subject_name": "食品标准与法规(01965)",
+      "channel_code": "zxx",
+      "count": 49
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 265,
+      "subject_name": "小学教师专业发展(14444)",
+      "channel_code": "zxx",
+      "count": 45
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 247,
+      "subject_name": "(01685)动漫艺术概论",
+      "channel_code": "zxx",
+      "count": 45
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 268,
+      "subject_name": "(07529)基础教育改革概论",
+      "channel_code": "zxx",
+      "count": 44
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 246,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 43
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 267,
+      "subject_name": "中小学教育政策法规(07472)",
+      "channel_code": "zxx",
+      "count": 43
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 357,
+      "subject_name": "材料加工和成型工艺(00699)",
+      "channel_code": "zxx",
+      "count": 43
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 402,
+      "subject_name": "劳动和社会保障法(13969)",
+      "channel_code": "zxx",
+      "count": 41
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 304,
+      "subject_name": "(14033)内部控制与风险管理",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 276,
+      "subject_name": "(10999)公共政策分析",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 274,
+      "subject_name": "政治学原理(14660)",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 296,
+      "subject_name": "(14199)生产运作与管理",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 399,
+      "subject_name": "知识产权法(00226)",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 402,
+      "subject_name": "(13969)劳动和社会保障法",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 400,
+      "subject_name": "环境资源法学(13749)",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 387,
+      "subject_name": "食品微生物学(02517)",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 395,
+      "subject_name": "国际经济法(13702 )",
+      "channel_code": "zxx",
+      "count": 40
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 297,
+      "subject_name": "项目管理(03346)",
+      "channel_code": "zxx",
+      "count": 39
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 210,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 37
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 272,
+      "subject_name": "(06160)中国古代小说研究",
+      "channel_code": "zxx",
+      "count": 37
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 147,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 36
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 178,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 35
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 179,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 35
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 147,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 33
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 309,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 33
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 220,
+      "subject_name": "(13811)绩效管理",
+      "channel_code": "zxx",
+      "count": 33
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 223,
+      "subject_name": "人员素质测评理论与方法(14112)",
+      "channel_code": "zxx",
+      "count": 32
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 215,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 162,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 305,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 195,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 263,
+      "subject_name": "(14448)小学教育研究方法",
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 353,
+      "subject_name": "(03511)中外电影史",
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 271,
+      "subject_name": "中国书法史(05454)",
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 279,
+      "subject_name": "西方行政学说史(00323)",
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 283,
+      "subject_name": "政府绩效管理(14655)",
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 389,
+      "subject_name": "(03665)认知心理学",
+      "channel_code": "zxx",
+      "count": 30
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 180,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 28
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 253,
+      "subject_name": "幼儿园课程与教学(14605)",
+      "channel_code": "zxx",
+      "count": 28
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 303,
+      "subject_name": "审计学原理(06069)",
+      "channel_code": "zxx",
+      "count": 28
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 280,
+      "subject_name": "国际政治学概论(13709)",
+      "channel_code": "zxx",
+      "count": 28
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 166,
+      "subject_name": "高级财务管理(00207)",
+      "channel_code": "zxx",
+      "count": 28
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 389,
+      "subject_name": "认知心理学(03665)",
+      "channel_code": "zxx",
+      "count": 27
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 258,
+      "subject_name": "学前儿童健康教育(30004)",
+      "channel_code": "zxx",
+      "count": 26
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 269,
+      "subject_name": "小学英语教学研究(14458)",
+      "channel_code": "zxx",
+      "count": 26
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 269,
+      "subject_name": "(14458)小学英语教学研究",
+      "channel_code": "zxx",
+      "count": 25
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 387,
+      "subject_name": "食品微生物学(02517)",
+      "channel_code": "zxx",
+      "count": 25
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 147,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 162,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 221,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 236,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 361,
+      "subject_name": "计算机辅助产品设计(13799)",
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 259,
+      "subject_name": "(30005)学前儿童艺术教育",
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 283,
+      "subject_name": "政府绩效管理(14655)",
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 222,
+      "subject_name": "劳动关系与劳动法(13967)",
+      "channel_code": "zxx",
+      "count": 24
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 277,
+      "subject_name": "(05722)公共经济学",
+      "channel_code": "zxx",
+      "count": 23
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 295,
+      "subject_name": "人力资源管理(中级)(14104)",
+      "channel_code": "zxx",
+      "count": 22
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 304,
+      "subject_name": "(14033)内部控制与风险管理",
+      "channel_code": "zxx",
+      "count": 21
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 297,
+      "subject_name": "(03346)项目管理",
+      "channel_code": "zxx",
+      "count": 21
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 305,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 221,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 253,
+      "subject_name": "幼儿园课程与教学(14605)",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 303,
+      "subject_name": "(06069)审计学原理",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 361,
+      "subject_name": "(13799)计算机辅助产品设计",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 223,
+      "subject_name": "(14112)人员素质测评理论与方法",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 280,
+      "subject_name": "(13709)国际政治学概论",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 295,
+      "subject_name": "人力资源管理(中级)(14104)",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 278,
+      "subject_name": "(03450)公共部门人力资源管理",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 220,
+      "subject_name": "绩效管理(13811)",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 296,
+      "subject_name": "生产运作与管理(14199)",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 395,
+      "subject_name": "(13702 )国际经济法",
+      "channel_code": "zxx",
+      "count": 20
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 300,
+      "subject_name": "(13316)财务分析",
+      "channel_code": "zxx",
+      "count": 19
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 135,
+      "subject_name": "英语（专升本）(13000)",
+      "channel_code": "zxx",
+      "count": 18
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 244,
+      "subject_name": "(00813)外国作家作品专题研究",
+      "channel_code": "zxx",
+      "count": 18
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 304,
+      "subject_name": "(14033)内部控制与风险管理",
+      "channel_code": "zxx",
+      "count": 18
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 278,
+      "subject_name": "公共部门人力资源管理(03450)",
+      "channel_code": "zxx",
+      "count": 16
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 389,
+      "subject_name": "(03665)认知心理学",
+      "channel_code": "zxx",
+      "count": 16
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 217,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 15
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 309,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 15
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 162,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 15
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 225,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 15
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 274,
+      "subject_name": "(14660)政治学原理",
+      "channel_code": "zxx",
+      "count": 14
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 178,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 12
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": 210,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 12
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 355,
+      "subject_name": "古代汉语(00536)",
+      "channel_code": "zxx",
+      "count": 12
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 276,
+      "subject_name": "公共政策分析(10999)",
+      "channel_code": "zxx",
+      "count": 12
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 290,
+      "subject_name": "经济学原理(中级)(13887)",
+      "channel_code": "zxx",
+      "count": 12
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 215,
+      "subject_name": "中国近现代史纲要(03708)",
+      "channel_code": "zxx",
+      "count": 11
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 291,
+      "subject_name": "(13683)管理学原理(中级)",
+      "channel_code": "zxx",
+      "count": 11
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 194,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 226,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 259,
+      "subject_name": "(30005)学前儿童艺术教育",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 263,
+      "subject_name": "小学教育研究方法(14448)",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 304,
+      "subject_name": "(14033)内部控制与风险管理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 277,
+      "subject_name": "(05722)公共经济学",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 280,
+      "subject_name": "国际政治学概论(13709)",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 278,
+      "subject_name": "(03450)公共部门人力资源管理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 278,
+      "subject_name": "(03450)公共部门人力资源管理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 276,
+      "subject_name": "(10999)公共政策分析",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 283,
+      "subject_name": "(14655)政府绩效管理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 274,
+      "subject_name": "(14660)政治学原理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 299,
+      "subject_name": "财务会计(中级)(13140)",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 300,
+      "subject_name": "财务分析(13316)",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 297,
+      "subject_name": "(03346)项目管理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 296,
+      "subject_name": "(14199)生产运作与管理",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 358,
+      "subject_name": "产品开发设计(00703)",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 360,
+      "subject_name": "(13658)工业设计史论",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 247,
+      "subject_name": "(01685)动漫艺术概论",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 213,
+      "subject_name": "学前教育研究方法(13213)",
+      "channel_code": "zxx",
+      "count": 10
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 180,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 8
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 184,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 8
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 168,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 8
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 305,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 7
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 200,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 7
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 159,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 6
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 144,
+      "subject_name": "(00058)市场营销学",
+      "channel_code": "zxx",
+      "count": 6
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 300,
+      "subject_name": "(13316)财务分析",
+      "channel_code": "zxx",
+      "count": 6
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 474,
+      "subject_name": "习近平新时代中国特色社会主义思想概论(15040)",
+      "channel_code": "zxx",
+      "count": 6
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 317,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 5
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 254,
+      "subject_name": "幼儿游戏理论与指导(14603)",
+      "channel_code": "zxx",
+      "count": 5
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 221,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 183,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 199,
+      "subject_name": "(00882)学前教育心理学",
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 174,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 271,
+      "subject_name": "(05454)中国书法史",
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 276,
+      "subject_name": "(10999)公共政策分析",
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 291,
+      "subject_name": "(13683)管理学原理(中级)",
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "4",
+      "type_name": "填空题",
+      "subject_id": 299,
+      "subject_name": "财务会计(中级)(13140)",
+      "channel_code": "zxx",
+      "count": 4
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 214,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 3
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 194,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 3
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 240,
+      "subject_name": "(30002)幼儿园教育活动设计与组织",
+      "channel_code": "zxx",
+      "count": 3
+    },
+    {
+      "type": "1",
+      "type_name": "单选题",
+      "subject_id": -1,
+      "subject_name": "无匹配结果",
+      "channel_code": "zxx",
+      "count": 3
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 160,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 215,
+      "subject_name": "(03708)中国近现代史纲要",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 187,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 175,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 176,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 237,
+      "subject_name": "毛泽东思想和中国特色社会主义理论体系概论(12656)",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 233,
+      "subject_name": "学前儿童发展(12340)",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 228,
+      "subject_name": "(09277)教师职业道德与专业发展",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 181,
+      "subject_name": "学前教育原理(00398)",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 193,
+      "subject_name": "(00541)语言学概论",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 256,
+      "subject_name": "(13147)幼儿园组织与管理",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 377,
+      "subject_name": "(14591)有机化学",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 266,
+      "subject_name": "小学课堂教学案例评析(09280)",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 353,
+      "subject_name": "中外电影史(03511)",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 274,
+      "subject_name": "(14660)政治学原理",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 382,
+      "subject_name": "食品标准与法规(01965)",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "3",
+      "type_name": "判断题",
+      "subject_id": 186,
+      "subject_name": "(00466)发展与教育心理学",
+      "channel_code": "zxx",
+      "count": 2
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 209,
+      "subject_name": null,
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 189,
+      "subject_name": "(00537)中国现代文学史",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 204,
+      "subject_name": "(03008)护理学研究",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 232,
+      "subject_name": "(12339)幼儿园教育基础",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 267,
+      "subject_name": "(07472)中小学教育政策法规",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "8",
+      "type_name": "计算分析题",
+      "subject_id": 277,
+      "subject_name": "(05722)公共经济学",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 233,
+      "subject_name": "(12340)学前儿童发展",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": -1,
+      "subject_name": "无匹配结果",
+      "channel_code": "zxx",
+      "count": 1
+    },
+    {
+      "type": "2",
+      "type_name": "多选题",
+      "subject_id": 199,
+      "subject_name": "(00882)学前教育心理学",
+      "channel_code": "zxx",
+      "count": 1
+    }
+  ],
+  "results": [
+    {
+      "group_index": 0,
+      "group": {
+        "type": "1",
+        "type_name": "单选题",
+        "subject_id": 215,
+        "subject_name": "中国近现代史纲要(15043)",
+        "channel_code": "zxx",
+        "count": 1162
+      },
+      "results": {
+        "group": {
+          "type": "1",
+          "type_name": "单选题",
+          "subject_id": 215,
+          "subject_name": "中国近现代史纲要(15043)",
+          "channel_code": "zxx",
+          "count": 1162
+        },
+        "total_questions": 1162,
+        "exact_duplicates": [
+          {
+            "question_ids": [
+              1539,
+              1863
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "c51bcce45b4419525896027958cc9600"
+          },
+          {
+            "question_ids": [
+              1540,
+              1864
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "2f54195ebdba643c3ef64c9eca54c761"
+          },
+          {
+            "question_ids": [
+              1541,
+              1865
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9fd3b86065fe62b53612e6c6603a1c1e"
+          },
+          {
+            "question_ids": [
+              1543,
+              1867
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "d842f8d2d3048df07e88069d81f2f221"
+          },
+          {
+            "question_ids": [
+              1544,
+              1868
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "1b9856a59a715324fc7cbcb4dec1edba"
+          },
+          {
+            "question_ids": [
+              1545,
+              1842
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "04e22cd1585e611893eda9ba873e54a8"
+          },
+          {
+            "question_ids": [
+              1546,
+              1843
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "b29d5fc2ade64d1193c4bf42c8041a7e"
+          },
+          {
+            "question_ids": [
+              1547,
+              1844
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "680f7e50ad2229b50755fde2c59d3536"
+          },
+          {
+            "question_ids": [
+              1548,
+              1845
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "539a0ee4d247aedb60bffeb48f151db0"
+          },
+          {
+            "question_ids": [
+              1549,
+              1846
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "27817c390a80f95010513cc86b709660"
+          },
+          {
+            "question_ids": [
+              1556,
+              1886
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "19f0bed85cb8ceb009422c64a8f69977"
+          },
+          {
+            "question_ids": [
+              1557,
+              1887
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9805597eb3b20f593844e295473dcd9c"
+          },
+          {
+            "question_ids": [
+              1558,
+              1888
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "93ed9cbbfe3e0c5a74b240a58cdde29f"
+          },
+          {
+            "question_ids": [
+              1560,
+              1889
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "fdb40c13047b8adebe3cd172971f185e"
+          },
+          {
+            "question_ids": [
+              1562,
+              1890
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "ccd5cd764afdb6de988c912180ee5cf9"
+          },
+          {
+            "question_ids": [
+              1576,
+              71935
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "b43d8aac93cb3a33c5974a3f054c4c1a"
+          },
+          {
+            "question_ids": [
+              1583,
+              107883
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "829cf294117d2c7f12b79684de5002a8"
+          },
+          {
+            "question_ids": [
+              1586,
+              1616,
+              1652,
+              1820,
+              63292
+            ],
+            "count": 5,
+            "similarity": 1.0,
+            "content_hash": "bac0bfcb15fd64135a0af758e0328a4f"
+          },
+          {
+            "question_ids": [
+              1587,
+              1852
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "16e06c2f1df386dfc7589a651c3c7c41"
+          },
+          {
+            "question_ids": [
+              1588,
+              1853
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "195332156aea477c539c82da6e6b8ac8"
+          },
+          {
+            "question_ids": [
+              1589,
+              114289
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9727d4a7174c59e174b7ce1e13db7e4a"
+          },
+          {
+            "question_ids": [
+              1593,
+              63301
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "0fe3f7d6d28b8250380cb01916c1ea13"
+          },
+          {
+            "question_ids": [
+              1594,
+              1876,
+              57674,
+              63302
+            ],
+            "count": 4,
+            "similarity": 1.0,
+            "content_hash": "2d4a762a8c4408eefbe072d42ae89d8b"
+          },
+          {
+            "question_ids": [
+              1595,
+              63303
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "7116e845b514c3be1fb8de08ecb0be11"
+          },
+          {
+            "question_ids": [
+              1596,
+              1877,
+              63304
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "15659059b096be7b85d8f6da09908dea"
+          },
+          {
+            "question_ids": [
+              1605,
+              1882
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "3662af055619bdc9b36cb86d7af9a0da"
+          },
+          {
+            "question_ids": [
+              1608,
+              1884
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "dcef022022d1710034767323a272b824"
+          },
+          {
+            "question_ids": [
+              1612,
+              1869
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "ee00665944adcc9658bdf8a5f5e7c548"
+          },
+          {
+            "question_ids": [
+              1618,
+              70961
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "fd87b875bbfab73a25ceec0e32ebff4a"
+          },
+          {
+            "question_ids": [
+              1619,
+              1841,
+              1870,
+              107892
+            ],
+            "count": 4,
+            "similarity": 1.0,
+            "content_hash": "416bc5f473b0e9eca3cad18888d2493c"
+          },
+          {
+            "question_ids": [
+              1622,
+              63297
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "a79030ec5295a1dfb89213413092d58c"
+          },
+          {
+            "question_ids": [
+              1624,
+              1854,
+              107898
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "8f6dfc667f36d0129f42a96d2e321b3a"
+          },
+          {
+            "question_ids": [
+              1626,
+              70970
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "3c0eed8a0ba50ad7fa4ff2ca56f46795"
+          },
+          {
+            "question_ids": [
+              1628,
+              70971
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e19135164f9b7c5ea1082101bf2195cb"
+          },
+          {
+            "question_ids": [
+              1647,
+              1908
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e982f6ac107d771461d170c68a7dcef5"
+          },
+          {
+            "question_ids": [
+              1763,
+              2109
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "63f91db99869aa1e963167d95bb261cd"
+          },
+          {
+            "question_ids": [
+              1765,
+              2078
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "6e2a46dc28520986a2de31e42a6c67ac"
+          },
+          {
+            "question_ids": [
+              1773,
+              2182
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "07a6be05df8739df212d09231df4d6b8"
+          },
+          {
+            "question_ids": [
+              1799,
+              63322,
+              92179
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "e124dcdf907c9fae6cb8389e9ba5ce9f"
+          },
+          {
+            "question_ids": [
+              1803,
+              79979
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "601aec1091e15241f92a00e8044affbc"
+          },
+          {
+            "question_ids": [
+              1805,
+              57689
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "530b90e442e5e837faabf034dd23330e"
+          },
+          {
+            "question_ids": [
+              1811,
+              63288,
+              70956
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "1ab742b6580e217292c5480452aa8b4f"
+          },
+          {
+            "question_ids": [
+              1849,
+              107889
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "dbe45ca31320437c55f50ebab501a8c5"
+          },
+          {
+            "question_ids": [
+              1850,
+              107890
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e240abb1e76a8371212917d114145105"
+          },
+          {
+            "question_ids": [
+              1851,
+              57666,
+              107891
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "3964826edc769a6991de09a988283734"
+          },
+          {
+            "question_ids": [
+              1855,
+              107899
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "6be51aa9eb1e30e31cd350990c29fc1c"
+          },
+          {
+            "question_ids": [
+              1856,
+              107900
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "f9656847aa459559c71b3428eff5dfef"
+          },
+          {
+            "question_ids": [
+              1857,
+              107901
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "d880ad94d79b782aa8df65170d57dd8e"
+          },
+          {
+            "question_ids": [
+              1871,
+              107893
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "ba89766d7f42de660890c9d4ec16588e"
+          },
+          {
+            "question_ids": [
+              1872,
+              107894
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9256ebb2fc1c7badf5fb71c90a2acfe0"
+          },
+          {
+            "question_ids": [
+              1873,
+              107895
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "58b39d9aeca5ffbc123cec42342b9fee"
+          },
+          {
+            "question_ids": [
+              1874,
+              107896,
+              114295
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "70f1150438669cee0bd2a52b364e7d32"
+          },
+          {
+            "question_ids": [
+              1875,
+              107897
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "1c30731ef470a12a67510928c3ecda78"
+          },
+          {
+            "question_ids": [
+              1935,
+              34758
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "b95bad722d2c6751f1064da21e846bce"
+          },
+          {
+            "question_ids": [
+              34753,
+              34754
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e8b16687243c75ed42884265a089f715"
+          },
+          {
+            "question_ids": [
+              63289,
+              114286
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "d3f266c0565f556f7e310d37c7115278"
+          },
+          {
+            "question_ids": [
+              63298,
+              70966
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "586e9dcdb9bdaa34e75a946fb2b75b20"
+          },
+          {
+            "question_ids": [
+              80000,
+              92209
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "3899953ac80acce89b91dbfc37e6b609"
+          }
+        ],
+        "similar_duplicates": [],
+        "processed_at": "2026-01-03T16:14:26.374922"
+      },
+      "processed_at": "2026-01-03T16:14:26.383707"
+    },
+    {
+      "group_index": 1,
+      "group": null,
+      "results": {
+        "group": {
+          "type": "1",
+          "type_name": "单选题",
+          "subject_id": 215,
+          "subject_name": "中国近现代史纲要(15043)",
+          "channel_code": "zxx",
+          "count": 1162
+        },
+        "total_questions": 1162,
+        "exact_duplicates": [
+          {
+            "question_ids": [
+              1539,
+              1863
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "c51bcce45b4419525896027958cc9600"
+          },
+          {
+            "question_ids": [
+              1540,
+              1864
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "2f54195ebdba643c3ef64c9eca54c761"
+          },
+          {
+            "question_ids": [
+              1541,
+              1865
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9fd3b86065fe62b53612e6c6603a1c1e"
+          },
+          {
+            "question_ids": [
+              1543,
+              1867
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "d842f8d2d3048df07e88069d81f2f221"
+          },
+          {
+            "question_ids": [
+              1544,
+              1868
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "1b9856a59a715324fc7cbcb4dec1edba"
+          },
+          {
+            "question_ids": [
+              1545,
+              1842
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "04e22cd1585e611893eda9ba873e54a8"
+          },
+          {
+            "question_ids": [
+              1546,
+              1843
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "b29d5fc2ade64d1193c4bf42c8041a7e"
+          },
+          {
+            "question_ids": [
+              1547,
+              1844
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "680f7e50ad2229b50755fde2c59d3536"
+          },
+          {
+            "question_ids": [
+              1548,
+              1845
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "539a0ee4d247aedb60bffeb48f151db0"
+          },
+          {
+            "question_ids": [
+              1549,
+              1846
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "27817c390a80f95010513cc86b709660"
+          },
+          {
+            "question_ids": [
+              1556,
+              1886
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "19f0bed85cb8ceb009422c64a8f69977"
+          },
+          {
+            "question_ids": [
+              1557,
+              1887
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9805597eb3b20f593844e295473dcd9c"
+          },
+          {
+            "question_ids": [
+              1558,
+              1888
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "93ed9cbbfe3e0c5a74b240a58cdde29f"
+          },
+          {
+            "question_ids": [
+              1560,
+              1889
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "fdb40c13047b8adebe3cd172971f185e"
+          },
+          {
+            "question_ids": [
+              1562,
+              1890
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "ccd5cd764afdb6de988c912180ee5cf9"
+          },
+          {
+            "question_ids": [
+              1576,
+              71935
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "b43d8aac93cb3a33c5974a3f054c4c1a"
+          },
+          {
+            "question_ids": [
+              1583,
+              107883
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "829cf294117d2c7f12b79684de5002a8"
+          },
+          {
+            "question_ids": [
+              1586,
+              1616,
+              1652,
+              1820,
+              63292
+            ],
+            "count": 5,
+            "similarity": 1.0,
+            "content_hash": "bac0bfcb15fd64135a0af758e0328a4f"
+          },
+          {
+            "question_ids": [
+              1587,
+              1852
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "16e06c2f1df386dfc7589a651c3c7c41"
+          },
+          {
+            "question_ids": [
+              1588,
+              1853
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "195332156aea477c539c82da6e6b8ac8"
+          },
+          {
+            "question_ids": [
+              1589,
+              114289
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9727d4a7174c59e174b7ce1e13db7e4a"
+          },
+          {
+            "question_ids": [
+              1593,
+              63301
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "0fe3f7d6d28b8250380cb01916c1ea13"
+          },
+          {
+            "question_ids": [
+              1594,
+              1876,
+              57674,
+              63302
+            ],
+            "count": 4,
+            "similarity": 1.0,
+            "content_hash": "2d4a762a8c4408eefbe072d42ae89d8b"
+          },
+          {
+            "question_ids": [
+              1595,
+              63303
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "7116e845b514c3be1fb8de08ecb0be11"
+          },
+          {
+            "question_ids": [
+              1596,
+              1877,
+              63304
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "15659059b096be7b85d8f6da09908dea"
+          },
+          {
+            "question_ids": [
+              1605,
+              1882
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "3662af055619bdc9b36cb86d7af9a0da"
+          },
+          {
+            "question_ids": [
+              1608,
+              1884
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "dcef022022d1710034767323a272b824"
+          },
+          {
+            "question_ids": [
+              1612,
+              1869
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "ee00665944adcc9658bdf8a5f5e7c548"
+          },
+          {
+            "question_ids": [
+              1618,
+              70961
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "fd87b875bbfab73a25ceec0e32ebff4a"
+          },
+          {
+            "question_ids": [
+              1619,
+              1841,
+              1870,
+              107892
+            ],
+            "count": 4,
+            "similarity": 1.0,
+            "content_hash": "416bc5f473b0e9eca3cad18888d2493c"
+          },
+          {
+            "question_ids": [
+              1622,
+              63297
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "a79030ec5295a1dfb89213413092d58c"
+          },
+          {
+            "question_ids": [
+              1624,
+              1854,
+              107898
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "8f6dfc667f36d0129f42a96d2e321b3a"
+          },
+          {
+            "question_ids": [
+              1626,
+              70970
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "3c0eed8a0ba50ad7fa4ff2ca56f46795"
+          },
+          {
+            "question_ids": [
+              1628,
+              70971
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e19135164f9b7c5ea1082101bf2195cb"
+          },
+          {
+            "question_ids": [
+              1647,
+              1908
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e982f6ac107d771461d170c68a7dcef5"
+          },
+          {
+            "question_ids": [
+              1763,
+              2109
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "63f91db99869aa1e963167d95bb261cd"
+          },
+          {
+            "question_ids": [
+              1765,
+              2078
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "6e2a46dc28520986a2de31e42a6c67ac"
+          },
+          {
+            "question_ids": [
+              1773,
+              2182
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "07a6be05df8739df212d09231df4d6b8"
+          },
+          {
+            "question_ids": [
+              1799,
+              63322,
+              92179
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "e124dcdf907c9fae6cb8389e9ba5ce9f"
+          },
+          {
+            "question_ids": [
+              1803,
+              79979
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "601aec1091e15241f92a00e8044affbc"
+          },
+          {
+            "question_ids": [
+              1805,
+              57689
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "530b90e442e5e837faabf034dd23330e"
+          },
+          {
+            "question_ids": [
+              1811,
+              63288,
+              70956
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "1ab742b6580e217292c5480452aa8b4f"
+          },
+          {
+            "question_ids": [
+              1849,
+              107889
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "dbe45ca31320437c55f50ebab501a8c5"
+          },
+          {
+            "question_ids": [
+              1850,
+              107890
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e240abb1e76a8371212917d114145105"
+          },
+          {
+            "question_ids": [
+              1851,
+              57666,
+              107891
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "3964826edc769a6991de09a988283734"
+          },
+          {
+            "question_ids": [
+              1855,
+              107899
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "6be51aa9eb1e30e31cd350990c29fc1c"
+          },
+          {
+            "question_ids": [
+              1856,
+              107900
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "f9656847aa459559c71b3428eff5dfef"
+          },
+          {
+            "question_ids": [
+              1857,
+              107901
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "d880ad94d79b782aa8df65170d57dd8e"
+          },
+          {
+            "question_ids": [
+              1871,
+              107893
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "ba89766d7f42de660890c9d4ec16588e"
+          },
+          {
+            "question_ids": [
+              1872,
+              107894
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "9256ebb2fc1c7badf5fb71c90a2acfe0"
+          },
+          {
+            "question_ids": [
+              1873,
+              107895
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "58b39d9aeca5ffbc123cec42342b9fee"
+          },
+          {
+            "question_ids": [
+              1874,
+              107896,
+              114295
+            ],
+            "count": 3,
+            "similarity": 1.0,
+            "content_hash": "70f1150438669cee0bd2a52b364e7d32"
+          },
+          {
+            "question_ids": [
+              1875,
+              107897
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "1c30731ef470a12a67510928c3ecda78"
+          },
+          {
+            "question_ids": [
+              1935,
+              34758
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "b95bad722d2c6751f1064da21e846bce"
+          },
+          {
+            "question_ids": [
+              34753,
+              34754
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "e8b16687243c75ed42884265a089f715"
+          },
+          {
+            "question_ids": [
+              63289,
+              114286
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "d3f266c0565f556f7e310d37c7115278"
+          },
+          {
+            "question_ids": [
+              63298,
+              70966
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "586e9dcdb9bdaa34e75a946fb2b75b20"
+          },
+          {
+            "question_ids": [
+              80000,
+              92209
+            ],
+            "count": 2,
+            "similarity": 1.0,
+            "content_hash": "3899953ac80acce89b91dbfc37e6b609"
+          }
+        ],
+        "similar_duplicates": [],
+        "processed_at": "2026-01-03T16:14:26.374922"
+      },
+      "processed_at": "2026-01-03T16:14:26.461498"
+    }
+  ]
+}

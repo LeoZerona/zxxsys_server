@@ -36,7 +36,7 @@ def migrate_add_role():
                 print("✓ 所有用户都已设置权限")
             
             # 为新用户设置默认权限
-            from config import Config
+            from src.config import Config
             print(f"✓ 新用户默认权限：{Config.DEFAULT_USER_ROLE}")
             
             print("\n✅ 迁移完成！")

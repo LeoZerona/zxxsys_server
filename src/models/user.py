@@ -1,10 +1,12 @@
+"""
+用户数据模型
+"""
 from datetime import datetime
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 import hashlib
 import re
+from src.models import db
 
-db = SQLAlchemy()
 
 class User(db.Model):
     """用户模型"""
@@ -49,23 +51,20 @@ class User(db.Model):
         """
         验证密码
         支持两种方式：
-        1. 前端传 MD5 值：直接验证
-        2. 前端传明文：先 MD5 再验证
+        1. 如果传入的是 MD5 哈希值，先转换为 MD5 再验证
+        2. 如果传入的是明文密码，先 MD5 再验证
         """
-        # 检查存储的密码哈希格式
-        if not self.password_hash:
-            return False
-        
-        # 如果输入是 MD5 值（32位十六进制），直接验证
+        # 如果传入的是 MD5 哈希值
         if self.is_md5_hash(password):
+            # 直接用 MD5 值验证（因为存储时也是基于 MD5 的哈希）
             return check_password_hash(self.password_hash, password)
         else:
-            # 如果输入是明文，先转换为 MD5 再验证
+            # 如果是明文密码，先转换为 MD5 再验证
             md5_password = self.md5_hash(password)
             return check_password_hash(self.password_hash, md5_password)
     
     def to_dict(self):
-        """转换为字典（用于 JSON 响应）"""
+        """转换为字典（用于 JSON 序列化）"""
         return {
             'id': self.id,
             'email': self.email,
@@ -95,29 +94,4 @@ class User(db.Model):
     
     def __repr__(self):
         return f'<User {self.email}>'
-
-
-class EmailVerification(db.Model):
-    """邮箱验证码模型"""
-    __tablename__ = 'email_verifications'
-    
-    id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), nullable=False, index=True)
-    code = db.Column(db.String(10), nullable=False)
-    is_used = db.Column(db.Boolean, default=False, nullable=False)
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    expires_at = db.Column(db.DateTime, nullable=False)
-    
-    def to_dict(self):
-        """转换为字典"""
-        return {
-            'id': self.id,
-            'email': self.email,
-            'is_used': self.is_used,
-            'created_at': self.created_at.isoformat() if self.created_at else None,
-            'expires_at': self.expires_at.isoformat() if self.expires_at else None
-        }
-    
-    def __repr__(self):
-        return f'<EmailVerification {self.email}: {self.code}>'
 

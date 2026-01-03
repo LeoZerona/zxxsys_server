@@ -2,12 +2,28 @@
 用户注册功能测试脚本
 测试注册接口是否正常工作，验证数据是否成功写入 MySQL test 数据库
 """
+import sys
+import os
+from pathlib import Path
+import io
+
+# Windows 控制台编码修复
+if sys.platform == 'win32':
+    try:
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+    except AttributeError:
+        pass
+
+# 添加项目根目录到 Python 路径
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
 import requests
 import json
 import random
 import string
-import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask
 from src.models import db, User, EmailVerification
 
@@ -41,6 +57,47 @@ def generate_test_password_plain():
     """生成测试密码（明文）"""
     return ''.join(random.choices(string.ascii_letters + string.digits, k=10))
 
+def create_test_verification_code(email, code="123456", expire_minutes=10):
+    """
+    直接创建测试验证码到数据库（不发送邮件）
+    
+    Args:
+        email: 邮箱地址
+        code: 验证码（默认使用万能验证码）
+        expire_minutes: 过期时间（分钟）
+    
+    Returns:
+        EmailVerification: 创建的验证码对象
+    """
+    from datetime import timedelta
+    
+    # 确保在 app context 中执行
+    with app.app_context():
+        # 检查是否已存在该邮箱的验证码
+        existing = EmailVerification.query.filter_by(
+            email=email,
+            is_used=False
+        ).order_by(EmailVerification.created_at.desc()).first()
+        
+        if existing:
+            # 更新现有验证码
+            existing.code = code
+            existing.expires_at = datetime.utcnow() + timedelta(minutes=expire_minutes)
+            existing.is_used = False
+            existing.created_at = datetime.utcnow()
+            verification = existing
+        else:
+            # 创建新验证码
+            verification = EmailVerification(
+                email=email,
+                code=code,
+                expires_at=datetime.utcnow() + timedelta(minutes=expire_minutes)
+            )
+            db.session.add(verification)
+        
+        db.session.commit()
+        return verification
+
 def test_register_with_md5_password():
     """测试使用 MD5 密码注册"""
     print("\n" + "="*80)
@@ -53,7 +110,7 @@ def test_register_with_md5_password():
         # 生成测试数据
         test_email = generate_test_email()
         test_password = generate_test_password()  # MD5 格式
-        test_code = "123456"  # 使用万能验证码
+        test_code = "123456"  # 测试验证码
         
         print(f"📧 测试邮箱: {test_email}")
         print(f"🔐 测试密码 (MD5): {test_password[:16]}...")
@@ -65,6 +122,11 @@ def test_register_with_md5_password():
             print(f"⚠️  邮箱已存在，删除旧记录...")
             db.session.delete(existing_user)
             db.session.commit()
+        
+        # 直接创建测试验证码（不发送邮件）
+        print(f"   🔧 创建测试验证码到数据库（不发送邮件）...")
+        create_test_verification_code(test_email, test_code)
+        print(f"   ✅ 测试验证码已创建: {test_code}")
         
         # 准备请求数据
         url = "http://localhost:5000/api/register"
@@ -154,6 +216,11 @@ def test_register_with_plain_password():
             db.session.delete(existing_user)
             db.session.commit()
         
+        # 直接创建测试验证码（不发送邮件）
+        print(f"   🔧 创建测试验证码到数据库（不发送邮件）...")
+        create_test_verification_code(test_email, test_code)
+        print(f"   ✅ 测试验证码已创建: {test_code}")
+        
         # 准备请求数据
         url = "http://localhost:5000/api/register"
         data = {
@@ -224,6 +291,12 @@ def test_register_duplicate_email():
             db.session.delete(existing_user)
             db.session.commit()
         
+        # 直接创建测试验证码（不发送邮件）
+        test_code = "123456"
+        print(f"   🔧 创建测试验证码到数据库（不发送邮件）...")
+        create_test_verification_code(test_email, test_code)
+        print(f"   ✅ 测试验证码已创建: {test_code}")
+        
         # 第一次注册
         user = User(email=test_email, role='user')
         user.set_password(test_password)
@@ -236,7 +309,7 @@ def test_register_duplicate_email():
         data = {
             "email": test_email,
             "password": test_password,
-            "verification_code": "123456"
+            "verification_code": test_code
         }
         
         print(f"\n📤 尝试用相同邮箱注册...")

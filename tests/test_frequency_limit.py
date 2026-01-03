@@ -3,7 +3,7 @@ import pytest
 import time
 from src.app import app, db
 from src.models import EmailVerification
-from src.email_service import send_verification_code
+from src.services.email_service import send_verification_code
 
 class TestVerificationCodeFrequencyLimit:
     """测试验证码发送频率限制"""

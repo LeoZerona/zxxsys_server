@@ -4,13 +4,32 @@ import re
 import logging
 from datetime import datetime
 from src.config import Config
-from src.models import db, User
-from src.email_service import init_mail, send_verification_code, verify_code
+from src.models import db, User, LoginAttempt  # 导入所有模型以确保表被创建
+from src.services.email_service import init_mail
+from src.routes.auth import register_route as register_auth_route
+from src.routes.email import register_email_routes
+from src.routes.user import register_user_routes
+from src.routes.question import register_question_routes
+from src.middleware.auth_middleware import init_auth_middleware
 
 app = Flask(__name__)
 app.config.from_object(Config)
 
 # 配置日志
+# 设置控制台编码为 UTF-8（Windows 兼容性）
+import sys
+import io
+if sys.platform == 'win32':
+    try:
+        # 检查是否已经包装过，避免重复包装导致文件关闭
+        if not isinstance(sys.stdout, io.TextIOWrapper) or (hasattr(sys.stdout, 'encoding') and sys.stdout.encoding.lower() != 'utf-8'):
+            sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace', line_buffering=True)
+        if not isinstance(sys.stderr, io.TextIOWrapper) or (hasattr(sys.stderr, 'encoding') and sys.stderr.encoding.lower() != 'utf-8'):
+            sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace', line_buffering=True)
+    except (AttributeError, OSError, ValueError):
+        # 如果无法包装（例如已经在其他地方包装过，或文件已关闭），忽略错误
+        pass
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s | %(levelname)s | %(message)s',
@@ -109,6 +128,15 @@ db.init_app(app)
 # 初始化邮箱服务
 init_mail(app)
 
+# 初始化认证中间件
+init_auth_middleware(app)
+
+# 注册路由模块
+register_auth_route(app)  # 注册认证相关路由（/api/register, /api/login, /api/refresh-token, /api/logout）
+register_email_routes(app)  # 注册邮箱相关路由（/api/send-verification-code, /api/verify-code）
+register_user_routes(app)  # 注册用户相关路由（/api/users/<id>）
+register_question_routes(app)  # 注册题目相关路由（/api/questions, /api/questions/<id>, /api/questions/batch, /api/questions/statistics）
+
 # 创建数据库表
 with app.app_context():
     print("=" * 80)
@@ -123,32 +151,55 @@ with app.app_context():
         db_type = 'MySQL' if 'mysql' in db_uri.lower() else 'SQLite' if 'sqlite' in db_uri.lower() else 'Unknown'
         print(f"数据库类型: {db_type}")
         
-        # 测试数据库连接
-        with db.engine.connect() as conn:
-            if db_type == 'MySQL':
-                # MySQL 特定查询
-                result = conn.execute(db.text("SELECT DATABASE(), USER()"))
-                db_info = result.fetchone()
-                if db_info:
-                    print(f"   数据库: {db_info[0]}")
-                    print(f"   用户: {db_info[1]}")
-            else:
-                # SQLite 简单查询
-                result = conn.execute(db.text("SELECT 1"))
-                print(f"   数据库文件: {db_uri.split('/')[-1] if '/' in db_uri else db_uri}")
-            print("✅ 数据库连接正常")
+        # 测试数据库连接（使用 try-except 确保连接失败不会阻止应用启动）
+        try:
+            with db.engine.connect() as conn:
+                if db_type == 'MySQL':
+                    # MySQL 特定查询
+                    try:
+                        result = conn.execute(db.text("SELECT DATABASE(), USER()"))
+                        db_info = result.fetchone()
+                        if db_info:
+                            print(f"   数据库: {db_info[0]}")
+                            print(f"   用户: {db_info[1]}")
+                    except Exception:
+                        # 如果查询失败，使用简单查询测试连接
+                        conn.execute(db.text("SELECT 1"))
+                        print(f"   连接: {db_uri.split('@')[1] if '@' in db_uri else 'Unknown'}")
+                else:
+                    # SQLite 简单查询
+                    result = conn.execute(db.text("SELECT 1"))
+                    print(f"   数据库文件: {db_uri.split('/')[-1] if '/' in db_uri else db_uri}")
+                print("✅ 数据库连接正常")
+        except Exception as conn_error:
+            print(f"⚠️  数据库连接失败: {str(conn_error)}")
+            if 'cryptography' in str(conn_error).lower():
+                print("   提示: 请安装 cryptography 包: pip install cryptography")
+            elif 'mysql' in db_type.lower():
+                print("   提示: 请检查 MySQL 服务是否运行，以及连接信息是否正确")
+            print("   应用将继续启动，但数据库功能可能不可用")
         
-        # 创建所有表
-        db.create_all()
-        print("✅ 数据库表检查/创建完成")
+        # 创建所有表（如果连接成功）
+        try:
+            db.create_all()
+            print("✅ 数据库表检查/创建完成")
+        except Exception as create_error:
+            print(f"⚠️  创建数据库表失败: {str(create_error)}")
         
         # 显示当前用户数量
-        user_count = User.query.count()
-        print(f"📊 当前用户数量: {user_count}")
+        try:
+            user_count = User.query.count()
+            print(f"📊 当前用户数量: {user_count}")
+        except Exception as query_error:
+            # 如果查询失败（可能是表结构不匹配），只显示警告
+            print(f"⚠️  无法查询用户数量: {str(query_error)}")
+            print("   提示: 可能需要更新数据库表结构")
+        
         print("=" * 80)
         print()
     except Exception as e:
-        print(f"❌ 数据库初始化失败: {str(e)}")
+        print(f"❌ 数据库初始化异常: {str(e)}")
+        print("   应用将继续启动，但数据库功能可能不可用")
         import traceback
         traceback.print_exc()
         print("=" * 80)
@@ -176,294 +227,57 @@ def health():
         'message': '服务运行正常'
     })
 
-@app.route('/api/register', methods=['POST'])
-def register():
-    """邮箱注册接口"""
-    try:
-        # 获取请求数据
-        data = request.get_json()
-        
-        print("👤 用户注册接口被调用")
-        if data:
-            email = data.get('email', '').strip()
-            print(f"   邮箱: {email}")
-            print(f"   验证码: {'已提供' if data.get('verification_code') else '未提供'}")
-            print(f"   密码: {'已提供' if data.get('password') else '未提供'}")
-        
-        if not data:
-            print("   ⚠️ 错误: 请求数据为空")
-            return jsonify({
-                'success': False,
-                'message': '请求数据不能为空'
-            }), 400
-        
-        email = data.get('email', '').strip()
-        password = data.get('password', '').strip()
-        verification_code = data.get('verification_code', '').strip()
-        
-        # 验证邮箱格式
-        if not email:
-            print("   ⚠️ 错误: 邮箱为空")
-            return jsonify({
-                'success': False,
-                'message': '邮箱不能为空'
-            }), 400
-        
-        if not re.match(Config.EMAIL_REGEX, email):
-            print(f"   ⚠️ 错误: 邮箱格式不正确 - {email}")
-            return jsonify({
-                'success': False,
-                'message': '邮箱格式不正确'
-            }), 400
-        
-        print(f"   ✅ 邮箱格式验证通过")
-        
-        # 验证密码
-        if not password:
-            print("   ⚠️ 错误: 密码为空")
-            return jsonify({
-                'success': False,
-                'message': '密码不能为空'
-            }), 400
-        
-        # 检查是否是 MD5 哈希值（前端已加密）
-        from models import User
-        is_md5 = User.is_md5_hash(password)
-        
-        if is_md5:
-            print(f"   🔐 检测到前端传入的是 MD5 加密密码（32位）")
-            # MD5 值长度固定为 32 位，无需验证长度
-        else:
-            # 明文密码需要验证长度
-            if len(password) < Config.MIN_PASSWORD_LENGTH:
-                print(f"   ⚠️ 错误: 密码长度不足 (当前: {len(password)}, 需要: {Config.MIN_PASSWORD_LENGTH})")
-                return jsonify({
-                    'success': False,
-                    'message': f'密码长度至少为 {Config.MIN_PASSWORD_LENGTH} 位'
-                }), 400
-        
-        print(f"   ✅ 密码验证通过")
-        
-        # 验证验证码
-        if not verification_code:
-            print("   ⚠️ 错误: 验证码为空")
-            return jsonify({
-                'success': False,
-                'message': '验证码不能为空'
-            }), 400
-        
-        print(f"   🔍 开始验证验证码...")
-        # 检查验证码（包含时效性检查）
-        from email_service import verify_code
-        verify_result = verify_code(email, verification_code)
-        
-        if not verify_result.get('success'):
-            print(f"   ❌ 验证码验证失败: {verify_result.get('message', '未知错误')}")
-            # verify_code 函数已经检查了验证码的有效性和过期时间
-            return jsonify({
-                'success': False,
-                'message': verify_result.get('message', '验证码验证失败')
-            }), 400
-        
-        print(f"   ✅ 验证码验证通过")
-        
-        # 检查邮箱是否已存在
-        existing_user = User.query.filter_by(email=email).first()
-        if existing_user:
-            print(f"   ⚠️ 错误: 邮箱已被注册")
-            return jsonify({
-                'success': False,
-                'message': '该邮箱已被注册'
-            }), 409
-        
-        print(f"   📝 开始创建用户...")
-        # 创建新用户（默认权限为普通用户）
-        new_user = User(
-            email=email,
-            role=Config.DEFAULT_USER_ROLE
-        )
-        new_user.set_password(password)
-        
-        print(f"   🔍 准备添加到数据库会话...")
-        db.session.add(new_user)
-        
-        # 刷新会话，确保对象已附加
-        db.session.flush()
-        print(f"   🔍 用户对象已添加到会话，临时ID: {new_user.id if hasattr(new_user, 'id') and new_user.id else '未生成'}")
-        
-        print(f"   🔍 开始提交事务...")
-        try:
-            db.session.commit()
-            print(f"   ✅ 数据库提交成功!")
-        except Exception as commit_error:
-            print(f"   ❌ 数据库提交失败: {str(commit_error)}")
-            db.session.rollback()
-            raise commit_error
-        
-        # 刷新会话，确保获取到最新的ID
-        db.session.refresh(new_user)
-        
-        # 验证用户是否真的保存到数据库（使用新会话查询）
-        print(f"   🔍 验证用户是否保存到数据库...")
-        # 创建一个新的查询来验证
-        saved_user = User.query.filter_by(email=email).first()
-        if saved_user:
-            print(f"   ✅ 用户已成功保存到数据库! 用户ID: {saved_user.id}, 邮箱: {saved_user.email}, 角色: {saved_user.role}")
-            print(f"   📊 数据库 URI: {app.config['SQLALCHEMY_DATABASE_URI']}")
-        else:
-            print(f"   ⚠️  警告: 用户提交成功但无法从数据库查询到!")
-            print(f"   📊 数据库 URI: {app.config['SQLALCHEMY_DATABASE_URI']}")
-            print(f"   💡 提示: 请检查您查询的数据库是否正确")
-        
-        print(f"   ✅ 用户注册成功! 用户ID: {new_user.id}, 角色: {new_user.role}")
-        
-        return jsonify({
-            'success': True,
-            'message': '注册成功',
-            'data': new_user.to_dict()
-        }), 201
-    
-    except Exception as e:
-        db.session.rollback()
-        print(f"   ❌ 注册过程中发生异常: {str(e)}")
-        import traceback
-        traceback.print_exc()
-        return jsonify({
-            'success': False,
-            'message': f'注册失败: {str(e)}'
-        }), 500
-
-@app.route('/api/send-verification-code', methods=['POST'])
-def send_code():
-    """发送邮箱验证码"""
-    try:
-        data = request.get_json()
-        
-        print("📧 发送验证码接口被调用")
-        print(f"   邮箱: {data.get('email', '未提供') if data else '无数据'}")
-        
-        if not data:
-            print("   ⚠️ 错误: 请求数据为空")
-            return jsonify({
-                'success': False,
-                'message': '请求数据不能为空'
-            }), 400
-        
-        email = data.get('email', '').strip()
-        
-        if not email:
-            print("   ⚠️ 错误: 邮箱为空")
-            return jsonify({
-                'success': False,
-                'message': '邮箱不能为空'
-            }), 400
-        
-        if not re.match(Config.EMAIL_REGEX, email):
-            print(f"   ⚠️ 错误: 邮箱格式不正确 - {email}")
-            return jsonify({
-                'success': False,
-                'message': '邮箱格式不正确'
-            }), 400
-        
-        print(f"   ✅ 邮箱格式验证通过，开始发送验证码到: {email}")
-        result = send_verification_code(email)
-        
-        if result.get('success'):
-            print(f"   ✅ 验证码发送成功！")
-            if 'code' in result:
-                print(f"   🔑 验证码: {result['code']} (测试模式)")
-        else:
-            print(f"   ❌ 验证码发送失败: {result.get('message', '未知错误')}")
-        
-        if result['success']:
-            # 开发环境可以返回验证码，生产环境应移除
-            response_data = {
-                'success': True,
-                'message': result['message']
-            }
-            # 如果配置了测试模式或开发环境，可以返回验证码
-            if 'code' in result:
-                response_data['code'] = result['code']  # 仅用于测试
-            
-            return jsonify(response_data), 200
-        else:
-            # 如果是频率限制，返回 429 状态码
-            status_code = 429 if 'cooldown_seconds' in result else 500
-            return jsonify(result), status_code
-    
-    except Exception as e:
-        print(f"   ❌ 发送验证码过程中发生异常: {str(e)}")
-        import traceback
-        traceback.print_exc()
-        return jsonify({
-            'success': False,
-            'message': f'发送验证码失败: {str(e)}'
-        }), 500
-
-@app.route('/api/verify-code', methods=['POST'])
-def verify_verification_code():
-    """验证邮箱验证码"""
-    try:
-        data = request.get_json()
-        
-        print("🔍 验证验证码接口被调用")
-        if data:
-            email = data.get('email', '').strip()
-            code = data.get('code', '').strip()
-            print(f"   邮箱: {email}")
-            print(f"   验证码: {code[:2]}**" if code else "未提供")
-        
-        if not data:
-            print("   ⚠️ 错误: 请求数据为空")
-            return jsonify({
-                'success': False,
-                'message': '请求数据不能为空'
-            }), 400
-        
-        email = data.get('email', '').strip()
-        code = data.get('code', '').strip()
-        
-        if not email or not code:
-            print("   ⚠️ 错误: 邮箱或验证码为空")
-            return jsonify({
-                'success': False,
-                'message': '邮箱和验证码不能为空'
-            }), 400
-        
-        print(f"   🔍 开始验证验证码...")
-        result = verify_code(email, code)
-        
-        if result['success']:
-            print(f"   ✅ 验证码验证成功！")
-            return jsonify(result), 200
-        else:
-            print(f"   ❌ 验证码验证失败: {result.get('message', '未知错误')}")
-            return jsonify(result), 400
-    
-    except Exception as e:
-        print(f"   ❌ 验证过程中发生异常: {str(e)}")
-        import traceback
-        traceback.print_exc()
-        return jsonify({
-            'success': False,
-            'message': f'验证失败: {str(e)}'
-        }), 500
-
-@app.route('/api/users/<int:user_id>', methods=['GET'])
-def get_user(user_id):
-    """获取用户信息（示例接口）"""
-    user = User.query.get_or_404(user_id)
-    return jsonify({
-        'success': True,
-        'data': user.to_dict()
-    })
+# 所有 API 路由已迁移到对应的路由模块：
+# - /api/register -> src/routes/auth.py (register_route)
+# - /api/send-verification-code -> src/routes/email.py (register_email_routes)
+# - /api/verify-code -> src/routes/email.py (register_email_routes)
+# - /api/users/<id> -> src/routes/user.py (register_user_routes)
 
 if __name__ == '__main__':
+    import socket
+    import sys
+    
     print("\n" + "="*80)
     print("🚀 Flask 后端服务启动中...")
     print("="*80)
-    print(f"📍 服务地址: http://localhost:5000")
-    print(f"📡 API 路径: http://localhost:5000/api")
+    
+    # 检测端口是否可用
+    def is_port_available(port):
+        """检测端口是否可用"""
+        try:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.bind(('127.0.0.1', port))
+                return True
+        except OSError:
+            return False
+    
+    # 尝试的端口列表
+    default_port = 5000
+    ports_to_try = [default_port, 5001, 5002, 8000, 8080]
+    
+    selected_port = None
+    for port in ports_to_try:
+        if is_port_available(port):
+            selected_port = port
+            break
+    
+    if selected_port is None:
+        print("❌ 错误: 所有尝试的端口都被占用")
+        print(f"   尝试的端口: {', '.join(map(str, ports_to_try))}")
+        print("   请关闭占用端口的程序或手动指定其他端口")
+        sys.exit(1)
+    
+    # Windows 系统使用 127.0.0.1 而不是 0.0.0.0，避免权限问题
+    if sys.platform == 'win32':
+        host = '127.0.0.1'
+    else:
+        host = '0.0.0.0'
+    
+    if selected_port != default_port:
+        print(f"⚠️  端口 {default_port} 被占用，使用端口 {selected_port}")
+    
+    print(f"📍 服务地址: http://localhost:{selected_port}")
+    print(f"📡 API 路径: http://localhost:{selected_port}/api")
     
     # 显示万能验证码信息（仅开发环境）
     universal_code = app.config.get('UNIVERSAL_VERIFICATION_CODE', '')
@@ -476,4 +290,14 @@ if __name__ == '__main__':
     print("="*80)
     print("📝 请求日志已启用，所有 API 请求将在控制台显示")
     print("="*80 + "\n")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    
+    try:
+        app.run(debug=True, host=host, port=selected_port, use_reloader=False)
+    except OSError as e:
+        print(f"\n❌ 启动失败: {str(e)}")
+        print("\n💡 解决方案:")
+        print("   1. 检查端口是否被其他程序占用")
+        print("   2. 尝试以管理员权限运行")
+        print("   3. 检查防火墙设置")
+        print("   4. 尝试使用其他端口（修改代码中的 ports_to_try 列表）")
+        sys.exit(1)

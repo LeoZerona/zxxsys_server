@@ -260,23 +260,54 @@ def verify_code(email, code):
             }
         
         # 正常验证码验证流程
+        # 重要：获取该邮箱最新（最近发送）的验证码，确保使用的是最新的验证码
         verification = EmailVerification.query.filter_by(
             email=email,
             code=code,
             is_used=False
-        ).first()
+        ).order_by(EmailVerification.created_at.desc()).first()
         
         if not verification:
-            return {
-                'success': False,
-                'message': '验证码无效'
-            }
+            # 检查是否存在该邮箱的其他验证码（用于更友好的错误提示）
+            existing_verifications = EmailVerification.query.filter_by(
+                email=email,
+                is_used=False
+            ).order_by(EmailVerification.created_at.desc()).all()
+            
+            if existing_verifications:
+                # 该邮箱有验证码，但验证码不匹配
+                return {
+                    'success': False,
+                    'message': '验证码不正确，请检查后重试'
+                }
+            else:
+                # 该邮箱没有任何有效验证码
+                return {
+                    'success': False,
+                    'message': '验证码无效或已过期，请重新获取'
+                }
         
         # 检查是否过期
         if datetime.utcnow() > verification.expires_at:
+            # 标记为已使用（即使是过期的，也标记为已使用，防止重复使用）
+            verification.is_used = True
+            db.session.commit()
             return {
                 'success': False,
                 'message': '验证码已过期，请重新获取'
+            }
+        
+        # 确保这是最新的验证码（如果该邮箱有多个未使用的验证码）
+        latest_verification = EmailVerification.query.filter_by(
+            email=email,
+            is_used=False
+        ).order_by(EmailVerification.created_at.desc()).first()
+        
+        if latest_verification and latest_verification.id != verification.id:
+            # 用户使用的是旧验证码，应该使用最新的
+            return {
+                'success': False,
+                'message': '请使用最新发送的验证码'
             }
         
         # 标记为已使用

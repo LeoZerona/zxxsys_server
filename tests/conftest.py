@@ -3,7 +3,7 @@ import pytest
 import os
 from src.app import app
 from src.models import db, User, EmailVerification
-from src.email_service import init_mail
+from src.services.email_service import init_mail
 
 @pytest.fixture
 def client():
