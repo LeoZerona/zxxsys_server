@@ -1,0 +1,92 @@
+{
+  "tests": [
+    {
+      "test_date": "2026-01-03T17:59:39.590490",
+      "test_group": {
+        "type": "4",
+        "type_name": "填空题",
+        "subject_id": 189,
+        "subject_name": "中国现代文学史(00537)",
+        "channel_code": "zxx",
+        "count": 255
+      },
+      "test_status": "completed",
+      "test_results": {
+        "processing_time_seconds": 0.240389,
+        "total_questions": 255,
+        "exact_duplicate_groups": 11,
+        "exact_duplicate_pairs": 15,
+        "similar_duplicate_pairs": 1,
+        "features_saved": 242,
+        "processed_at": "2026-01-03T17:59:39.830879"
+      },
+      "completed_at": "2026-01-03T17:59:39.837906"
+    },
+    {
+      "test_date": "2026-01-03T20:50:28.439069",
+      "test_group": {
+        "type": "2",
+        "type_name": "多选题",
+        "subject_id": 194,
+        "subject_name": null,
+        "channel_code": "zxx",
+        "count": 10
+      },
+      "test_status": "completed",
+      "test_results": {
+        "processing_time_seconds": 0.043582,
+        "total_questions": 10,
+        "exact_duplicate_groups": 0,
+        "exact_duplicate_pairs": 0,
+        "similar_duplicate_pairs": 0,
+        "features_saved": 10,
+        "processed_at": "2026-01-03T20:50:28.483654"
+      },
+      "completed_at": "2026-01-03T20:50:28.491718"
+    },
+    {
+      "test_date": "2026-01-03T20:52:22.302338",
+      "test_group": {
+        "type": "2",
+        "type_name": "多选题",
+        "subject_id": 194,
+        "subject_name": null,
+        "channel_code": "zxx",
+        "count": 10
+      },
+      "test_status": "completed",
+      "test_results": {
+        "processing_time_seconds": 0.041096,
+        "total_questions": 10,
+        "exact_duplicate_groups": 0,
+        "exact_duplicate_pairs": 0,
+        "similar_duplicate_pairs": 0,
+        "features_saved": 10,
+        "processed_at": "2026-01-03T20:52:22.351475"
+      },
+      "completed_at": "2026-01-03T20:52:22.399470"
+    },
+    {
+      "test_date": "2026-01-03T21:02:54.077050",
+      "test_group": {
+        "type": "2",
+        "type_name": "多选题",
+        "subject_id": 194,
+        "subject_name": null,
+        "channel_code": "zxx",
+        "count": 10
+      },
+      "test_status": "completed",
+      "test_results": {
+        "processing_time_seconds": 0.040647,
+        "total_questions": 10,
+        "exact_duplicate_groups": 0,
+        "exact_duplicate_pairs": 0,
+        "similar_duplicate_pairs": 0,
+        "features_saved": 10,
+        "processed_at": "2026-01-03T21:02:54.124627"
+      },
+      "completed_at": "2026-01-03T21:02:54.184460"
+    }
+  ]
+}
