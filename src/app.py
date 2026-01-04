@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from flask_socketio import SocketIO, emit, join_room, leave_room
 import re
 import logging
 from datetime import datetime
@@ -10,10 +11,20 @@ from src.routes.auth import register_route as register_auth_route
 from src.routes.email import register_email_routes
 from src.routes.user import register_user_routes
 from src.routes.question import register_question_routes
+from src.routes.question_dedup import register_question_dedup_routes
 from src.middleware.auth_middleware import init_auth_middleware
 
 app = Flask(__name__)
 app.config.from_object(Config)
+
+# 初始化 SocketIO（支持 WebSocket）
+socketio = SocketIO(
+    app,
+    cors_allowed_origins="*" if app.config.get('CORS_ALLOW_ALL_ORIGINS') else app.config.get('CORS_ORIGINS', []),
+    async_mode='eventlet',
+    logger=True,
+    engineio_logger=True
+)
 
 # 配置日志
 # 设置控制台编码为 UTF-8（Windows 兼容性）
@@ -136,6 +147,11 @@ register_auth_route(app)  # 注册认证相关路由（/api/register, /api/login
 register_email_routes(app)  # 注册邮箱相关路由（/api/send-verification-code, /api/verify-code）
 register_user_routes(app)  # 注册用户相关路由（/api/users/<id>）
 register_question_routes(app)  # 注册题目相关路由（/api/questions, /api/questions/<id>, /api/questions/batch, /api/questions/statistics）
+register_question_dedup_routes(app)  # 注册题目去重相关路由（/api/dedup/*）
+
+# 注册 WebSocket 路由
+from src.routes.websocket import register_websocket_routes
+register_websocket_routes(socketio)
 
 # 创建数据库表
 with app.app_context():
@@ -278,6 +294,7 @@ if __name__ == '__main__':
     
     print(f"📍 服务地址: http://localhost:{selected_port}")
     print(f"📡 API 路径: http://localhost:{selected_port}/api")
+    print(f"🔌 WebSocket 地址: ws://localhost:{selected_port}/socket.io/")
     
     # 显示万能验证码信息（仅开发环境）
     universal_code = app.config.get('UNIVERSAL_VERIFICATION_CODE', '')
@@ -292,7 +309,8 @@ if __name__ == '__main__':
     print("="*80 + "\n")
     
     try:
-        app.run(debug=True, host=host, port=selected_port, use_reloader=False)
+        # 使用 SocketIO 运行应用（支持 WebSocket）
+        socketio.run(app, debug=True, host=host, port=selected_port, allow_unsafe_werkzeug=True)
     except OSError as e:
         print(f"\n❌ 启动失败: {str(e)}")
         print("\n💡 解决方案:")

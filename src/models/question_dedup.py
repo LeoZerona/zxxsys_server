@@ -25,6 +25,8 @@ class DedupTask(db.Model):
     completed_at = db.Column(db.DateTime, comment='完成时间')
     error_message = db.Column(db.Text, comment='错误信息')
     config_json = db.Column(db.Text, comment='任务配置（JSON格式）')
+    analysis_type = db.Column(db.String(50), default='full', comment='分析类型：full=全量分析, incremental=增量分析, custom=自定义分析')
+    estimated_duration = db.Column(db.Integer, comment='预估时长（秒）')
     created_at = db.Column(db.DateTime, default=datetime.now, comment='创建时间')
     updated_at = db.Column(db.DateTime, default=datetime.now, onupdate=datetime.now, comment='更新时间')
     
@@ -49,6 +51,8 @@ class DedupTask(db.Model):
             'completed_at': self.completed_at.isoformat() if self.completed_at else None,
             'error_message': self.error_message,
             'config': json.loads(self.config_json) if self.config_json else None,
+            'analysis_type': self.analysis_type or 'full',
+            'estimated_duration': self.estimated_duration,
             'created_at': self.created_at.isoformat() if self.created_at else None,
             'updated_at': self.updated_at.isoformat() if self.updated_at else None
         }

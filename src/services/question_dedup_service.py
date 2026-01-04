@@ -123,18 +123,52 @@ class QuestionDedupService:
         return progress
     
     @staticmethod
-    def get_next_group() -> Optional[Dict[str, Any]]:
+    def get_next_group(task_id: Optional[int] = None) -> Optional[Dict[str, Any]]:
         """
         获取下一个待处理的分组
+        
+        Args:
+            task_id: 任务ID（可选），如果提供则只处理该任务的分组
         
         Returns:
             分组信息字典，如果所有分组都已处理完则返回 None
         """
         progress = QuestionDedupService.get_progress()
         
+        # 如果指定了task_id，检查是否匹配
+        if task_id and progress.get('task_id') != task_id:
+            # 如果task_id不匹配，重新初始化进度
+            groups = QuestionService.get_question_groups()
+            progress = {
+                'task_id': task_id,
+                'current_group_index': 0,
+                'total_groups': len(groups),
+                'processed_groups': 0,
+                'current_group': None,
+                'status': 'running',
+                'last_update': datetime.now().isoformat(),
+                'groups': groups
+            }
+            QuestionDedupService.save_progress(progress)
+        
         # 如果没有初始化，先初始化
         if progress['total_groups'] == 0 or not progress.get('groups'):
-            progress = QuestionDedupService.init_dedup_session()
+            if task_id:
+                # 使用指定的task_id初始化
+                groups = QuestionService.get_question_groups()
+                progress = {
+                    'task_id': task_id,
+                    'current_group_index': 0,
+                    'total_groups': len(groups),
+                    'processed_groups': 0,
+                    'current_group': None,
+                    'status': 'running',
+                    'last_update': datetime.now().isoformat(),
+                    'groups': groups
+                }
+                QuestionDedupService.save_progress(progress)
+            else:
+                progress = QuestionDedupService.init_dedup_session()
         
         current_index = progress['current_group_index']
         groups = progress['groups']

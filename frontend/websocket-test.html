@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket 实时进度测试</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .connected {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .disconnected {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: #4caf50;
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        .log {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        .log-entry {
+            margin: 5px 0;
+            padding: 5px;
+            border-left: 3px solid #007bff;
+            padding-left: 10px;
+        }
+        .log-entry.error {
+            border-left-color: #dc3545;
+        }
+        .log-entry.success {
+            border-left-color: #28a745;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WebSocket 实时进度测试</h1>
+    
+    <div>
+        <label>任务ID: </label>
+        <input type="number" id="taskId" value="1" min="1">
+        <button onclick="connect()">连接</button>
+        <button onclick="disconnect()">断开</button>
+        <button onclick="joinTask()">加入任务</button>
+        <button onclick="leaveTask()">离开任务</button>
+    </div>
+    
+    <div id="status" class="status disconnected">未连接</div>
+    
+    <div>
+        <h3>任务进度</h3>
+        <div class="progress-bar">
+            <div id="progressFill" class="progress-fill" style="width: 0%">0%</div>
+        </div>
+        <div id="progressInfo">
+            <div>状态: <span id="taskStatus">-</span></div>
+            <div>已处理: <span id="processedGroups">0</span> / <span id="totalGroups">0</span></div>
+            <div>当前分组: <span id="currentGroup">-</span></div>
+            <div>消息: <span id="message">-</span></div>
+        </div>
+    </div>
+    
+    <div>
+        <h3>日志</h3>
+        <button onclick="clearLog()">清空日志</button>
+        <div id="log" class="log"></div>
+    </div>
+
+    <script>
+        let socket = null;
+        let currentTaskId = null;
+
+        function log(message, type = 'info') {
+            const logDiv = document.getElementById('log');
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            const timestamp = new Date().toLocaleTimeString();
+            entry.textContent = `[${timestamp}] ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function clearLog() {
+            document.getElementById('log').innerHTML = '';
+        }
+
+        function updateStatus(connected) {
+            const statusDiv = document.getElementById('status');
+            if (connected) {
+                statusDiv.className = 'status connected';
+                statusDiv.textContent = '已连接';
+            } else {
+                statusDiv.className = 'status disconnected';
+                statusDiv.textContent = '未连接';
+            }
+        }
+
+        function connect() {
+            if (socket && socket.connected) {
+                log('已经连接', 'info');
+                return;
+            }
+
+            const serverUrl = 'http://localhost:5000';
+            log(`正在连接到 ${serverUrl}...`, 'info');
+            
+            socket = io(serverUrl, {
+                transports: ['websocket', 'polling'],
+                reconnection: true,
+                reconnectionDelay: 1000,
+                reconnectionAttempts: 5
+            });
+
+            socket.on('connect', () => {
+                log('WebSocket 连接成功', 'success');
+                updateStatus(true);
+            });
+
+            socket.on('disconnect', () => {
+                log('WebSocket 断开连接', 'error');
+                updateStatus(false);
+            });
+
+            socket.on('connected', (data) => {
+                log(`服务器确认: ${data.message}`, 'success');
+            });
+
+            socket.on('task_status', (data) => {
+                log(`收到任务状态: ${JSON.stringify(data)}`, 'info');
+                updateProgress(data.data);
+            });
+
+            socket.on('task_progress', (data) => {
+                log(`进度更新: ${data.progress_percentage}% - ${data.message || ''}`, 'info');
+                updateProgress(data);
+            });
+
+            socket.on('task_completed', (data) => {
+                log(`任务完成: ${JSON.stringify(data)}`, 'success');
+                updateProgress(data.data);
+                alert('任务已完成！');
+            });
+
+            socket.on('task_error', (data) => {
+                log(`任务错误: ${data.error}`, 'error');
+                alert(`任务错误: ${data.error}`);
+            });
+
+            socket.on('error', (data) => {
+                log(`错误: ${data.message}`, 'error');
+            });
+
+            socket.on('left', (data) => {
+                log(`离开房间: ${data.message}`, 'info');
+            });
+        }
+
+        function disconnect() {
+            if (socket) {
+                socket.disconnect();
+                socket = null;
+                log('已断开连接', 'info');
+                updateStatus(false);
+            }
+        }
+
+        function joinTask() {
+            const taskId = parseInt(document.getElementById('taskId').value);
+            if (!taskId) {
+                alert('请输入任务ID');
+                return;
+            }
+
+            if (!socket || !socket.connected) {
+                alert('请先连接WebSocket');
+                return;
+            }
+
+            currentTaskId = taskId;
+            socket.emit('join_task', { task_id: taskId });
+            log(`加入任务房间: task_${taskId}`, 'info');
+        }
+
+        function leaveTask() {
+            if (!currentTaskId || !socket) {
+                return;
+            }
+
+            socket.emit('leave_task', { task_id: currentTaskId });
+            log(`离开任务房间: task_${currentTaskId}`, 'info');
+            currentTaskId = null;
+        }
+
+        function updateProgress(data) {
+            if (!data) return;
+
+            // 更新状态
+            document.getElementById('taskStatus').textContent = data.status || '-';
+            
+            // 更新进度条
+            const progressPercentage = data.progress_percentage || 0;
+            const progressFill = document.getElementById('progressFill');
+            progressFill.style.width = `${progressPercentage}%`;
+            progressFill.textContent = `${progressPercentage.toFixed(2)}%`;
+            
+            // 更新分组信息
+            document.getElementById('processedGroups').textContent = data.processed_groups || 0;
+            document.getElementById('totalGroups').textContent = data.total_groups || 0;
+            
+            // 更新当前分组
+            if (data.current_group) {
+                const groupInfo = `${data.current_group.type_name} - ${data.current_group.subject_name} (${data.current_group.channel_code})`;
+                document.getElementById('currentGroup').textContent = groupInfo;
+            } else {
+                document.getElementById('currentGroup').textContent = '-';
+            }
+            
+            // 更新消息
+            document.getElementById('message').textContent = data.message || '-';
+        }
+
+        // 页面加载时自动连接
+        window.addEventListener('load', () => {
+            log('页面加载完成', 'info');
+        });
+    </script>
+</body>
+</html>
+
