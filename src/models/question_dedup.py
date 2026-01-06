@@ -13,7 +13,7 @@ class DedupTask(db.Model):
     
     id = db.Column(db.Integer, primary_key=True, comment='任务ID')
     task_name = db.Column(db.String(200), comment='任务名称（可选）')
-    status = db.Column(db.Enum('pending', 'running', 'completed', 'error', 'cancelled'), 
+    status = db.Column(db.Enum('pending', 'running', 'paused', 'completed', 'error', 'cancelled'), 
                        nullable=False, default='pending', comment='任务状态')
     total_groups = db.Column(db.Integer, default=0, comment='总分组数')
     processed_groups = db.Column(db.Integer, default=0, comment='已处理分组数')

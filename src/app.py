@@ -18,10 +18,12 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 # 初始化 SocketIO（支持 WebSocket）
+# 使用 'threading' 模式而不是 'eventlet'，以确保 HTTP 请求和 WebSocket 都能正常工作
+# threading 模式兼容性更好，虽然性能略低于 eventlet，但对于大多数应用已经足够
 socketio = SocketIO(
     app,
     cors_allowed_origins="*" if app.config.get('CORS_ALLOW_ALL_ORIGINS') else app.config.get('CORS_ORIGINS', []),
-    async_mode='eventlet',
+    async_mode='threading',  # 改为 threading 模式，避免 eventlet 导致的 HTTP 请求超时问题
     logger=True,
     engineio_logger=True
 )
@@ -252,6 +254,7 @@ def health():
 if __name__ == '__main__':
     import socket
     import sys
+    import os
     
     print("\n" + "="*80)
     print("🚀 Flask 后端服务启动中...")
@@ -283,18 +286,53 @@ if __name__ == '__main__':
         print("   请关闭占用端口的程序或手动指定其他端口")
         sys.exit(1)
     
-    # Windows 系统使用 127.0.0.1 而不是 0.0.0.0，避免权限问题
-    if sys.platform == 'win32':
-        host = '127.0.0.1'
-    else:
-        host = '0.0.0.0'
+    # 获取本机IP地址（用于局域网访问）
+    def get_local_ip():
+        """获取本机局域网IP地址"""
+        try:
+            # 创建一个UDP socket来获取本机IP
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            try:
+                # 连接到一个远程地址（不需要实际连接）
+                s.connect(('8.8.8.8', 80))
+                ip = s.getsockname()[0]
+            except Exception:
+                ip = '127.0.0.1'
+            finally:
+                s.close()
+            return ip
+        except Exception:
+            return '127.0.0.1'
+    
+    local_ip = get_local_ip()
+    
+    # 允许从环境变量配置监听地址，默认监听 0.0.0.0 以支持局域网访问
+    # 如果需要仅本地访问，可以设置环境变量 HOST=127.0.0.1
+    host = os.environ.get('HOST', '0.0.0.0')
     
     if selected_port != default_port:
         print(f"⚠️  端口 {default_port} 被占用，使用端口 {selected_port}")
     
-    print(f"📍 服务地址: http://localhost:{selected_port}")
-    print(f"📡 API 路径: http://localhost:{selected_port}/api")
-    print(f"🔌 WebSocket 地址: ws://localhost:{selected_port}/socket.io/")
+    print(f"\n📍 本地访问地址:")
+    print(f"   服务地址: http://localhost:{selected_port}")
+    print(f"   API 路径: http://localhost:{selected_port}/api")
+    print(f"   WebSocket: ws://localhost:{selected_port}/socket.io/")
+    
+    if local_ip != '127.0.0.1' and host == '0.0.0.0':
+        print(f"\n🌐 局域网访问地址:")
+        print(f"   服务地址: http://{local_ip}:{selected_port}")
+        print(f"   API 路径: http://{local_ip}:{selected_port}/api")
+        print(f"   WebSocket: ws://{local_ip}:{selected_port}/socket.io/")
+        print(f"   ✅ 已启用局域网访问（监听 0.0.0.0）")
+    elif host == '127.0.0.1':
+        print(f"\n🌐 局域网访问:")
+        print(f"   本机IP: {local_ip}")
+        print(f"   ⚠️  当前仅允许本地访问（监听 127.0.0.1）")
+        print(f"   💡 如需局域网访问，请设置环境变量 HOST=0.0.0.0")
+    
+    print(f"\n🔧 服务器配置:")
+    print(f"   监听地址: {host}")
+    print(f"   监听端口: {selected_port}")
     
     # 显示万能验证码信息（仅开发环境）
     universal_code = app.config.get('UNIVERSAL_VERIFICATION_CODE', '')

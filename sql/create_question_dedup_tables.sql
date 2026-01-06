@@ -13,7 +13,7 @@
 CREATE TABLE IF NOT EXISTS dedup_tasks (
     id INT AUTO_INCREMENT PRIMARY KEY COMMENT '任务ID',
     task_name VARCHAR(200) COMMENT '任务名称（可选）',
-    status ENUM('pending', 'running', 'completed', 'error', 'cancelled') NOT NULL DEFAULT 'pending' COMMENT '任务状态',
+    status ENUM('pending', 'running', 'paused', 'completed', 'error', 'cancelled') NOT NULL DEFAULT 'pending' COMMENT '任务状态',
     total_groups INT DEFAULT 0 COMMENT '总分组数',
     processed_groups INT DEFAULT 0 COMMENT '已处理分组数',
     total_questions INT DEFAULT 0 COMMENT '总题目数',

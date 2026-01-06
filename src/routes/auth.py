@@ -289,7 +289,10 @@ def register_route(app):
                     }), 400
                 
                 print(f"   ✅ 验证码验证通过")
-                login_attempt.captcha_verified = True
+                # 确保 login_attempt 存在后再设置验证码已验证标志
+                if login_attempt:
+                    login_attempt.captcha_verified = True
+                    db.session.commit()
             
             # 查询用户
             user = User.query.filter_by(email=email).first()

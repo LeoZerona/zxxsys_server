@@ -6,6 +6,7 @@ import json
 import os
 import re
 import hashlib
+import threading
 from typing import List, Dict, Any, Optional, Tuple, Set
 from datetime import datetime
 from src.models import db
@@ -19,18 +20,21 @@ from src.services.question_service import QuestionService
 
 class QuestionDedupService:
     """题目去重服务"""
-    
+
     # 进度文件路径（放在项目根目录）
     PROGRESS_FILE = os.path.join(
         os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')),
         'question_dedup_progress.json'
     )
+
+    # 文件锁，保护进度文件的并发访问
+    _file_lock = threading.Lock()
     
     @staticmethod
     def get_progress() -> Dict[str, Any]:
         """
         获取当前处理进度
-        
+
         Returns:
             进度信息字典，包含：
             - current_group_index: 当前处理的分组索引（从0开始）
@@ -40,15 +44,16 @@ class QuestionDedupService:
             - status: 状态（pending/running/completed/error）
             - last_update: 最后更新时间
         """
-        if os.path.exists(QuestionDedupService.PROGRESS_FILE):
-            try:
-                with open(QuestionDedupService.PROGRESS_FILE, 'r', encoding='utf-8') as f:
-                    return json.load(f)
-            except Exception as e:
-                print(f"读取进度文件失败: {e}")
+        with QuestionDedupService._file_lock:
+            if os.path.exists(QuestionDedupService.PROGRESS_FILE):
+                try:
+                    with open(QuestionDedupService.PROGRESS_FILE, 'r', encoding='utf-8') as f:
+                        return json.load(f)
+                except Exception as e:
+                    print(f"读取进度文件失败: {e}")
+                    return QuestionDedupService._init_progress()
+            else:
                 return QuestionDedupService._init_progress()
-        else:
-            return QuestionDedupService._init_progress()
     
     @staticmethod
     def _init_progress() -> Dict[str, Any]:
@@ -67,12 +72,17 @@ class QuestionDedupService:
     def save_progress(progress: Dict[str, Any]):
         """保存进度信息到文件"""
         progress['last_update'] = datetime.now().isoformat()
-        try:
-            with open(QuestionDedupService.PROGRESS_FILE, 'w', encoding='utf-8') as f:
-                json.dump(progress, f, ensure_ascii=False, indent=2)
-        except Exception as e:
-            print(f"保存进度文件失败: {e}")
-            raise
+        with QuestionDedupService._file_lock:
+            try:
+                # 为了防止部分写入，先写入临时文件，然后重命名
+                temp_file = QuestionDedupService.PROGRESS_FILE + '.tmp'
+                with open(temp_file, 'w', encoding='utf-8') as f:
+                    json.dump(progress, f, ensure_ascii=False, indent=2)
+                # 原子性重命名
+                os.replace(temp_file, QuestionDedupService.PROGRESS_FILE)
+            except Exception as e:
+                print(f"保存进度文件失败: {e}")
+                raise
     
     @staticmethod
     def init_dedup_session(task_name: Optional[str] = None, config: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -336,7 +346,7 @@ class QuestionDedupService:
                     progress['status'] = 'completed'
                 else:
                     task.status = 'running'
-                    progress['status'] = 'pending'
+                    progress['status'] = 'running'
                 db.session.commit()
         else:
             # 如果没有task_id，只更新JSON
@@ -676,15 +686,19 @@ class QuestionDedupService:
         return similar_pairs
     
     @staticmethod
-    def process_single_group(group: Dict[str, Any]) -> Dict[str, Any]:
+    def process_single_group(group: Dict[str, Any], task_id: Optional[int] = None) -> Dict[str, Any]:
         """
         处理单个分组
         
         Args:
             group: 分组信息字典，包含 type, subject_id, channel_code, count 等
+            task_id: 任务ID（可选），用于检查任务状态（支持暂停功能）
             
         Returns:
             处理结果字典，包含重复题目对等信息
+            
+        Raises:
+            RuntimeError: 如果任务被暂停或取消
         """
         # 获取该分组的所有题目
         questions = QuestionService.get_questions_by_group(
@@ -693,6 +707,15 @@ class QuestionDedupService:
             channel_code=group['channel_code']
         )
         
+        # 检查任务状态（如果提供了 task_id）
+        if task_id:
+            task = DedupTask.query.get(task_id)
+            if task and task.status != 'running':
+                if task.status == 'paused':
+                    raise RuntimeError(f"任务 {task_id} 已暂停")
+                elif task.status in ['cancelled', 'completed', 'error']:
+                    raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+        
         print(f"\n处理分组: {group['type_name']} - {group['subject_name']} ({group['channel_code']})")
         print(f"题目数量: {len(questions)}")
         
@@ -700,9 +723,27 @@ class QuestionDedupService:
         cleaned_questions = QuestionDedupService._clean_questions(questions)
         print(f"清洗完成: {len(cleaned_questions)} 题")
         
+        # 检查任务状态（步骤1后）
+        if task_id:
+            task = DedupTask.query.get(task_id)
+            if task and task.status != 'running':
+                if task.status == 'paused':
+                    raise RuntimeError(f"任务 {task_id} 已暂停")
+                elif task.status in ['cancelled', 'completed', 'error']:
+                    raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+        
         # 步骤2 - 秒筛完全一样的题
         exact_duplicates = QuestionDedupService._find_exact_duplicates(cleaned_questions)
         print(f"完全重复: {len(exact_duplicates)} 组")
+
+        # 检查任务状态（步骤2后）
+        if task_id:
+            task = DedupTask.query.get(task_id)
+            if task and task.status != 'running':
+                if task.status == 'paused':
+                    raise RuntimeError(f"任务 {task_id} 已暂停")
+                elif task.status in ['cancelled', 'completed', 'error']:
+                    raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
         
         # 获取完全重复的题目ID集合（这些题目不需要参与相似度计算）
         exact_duplicate_question_ids = set()
@@ -720,17 +761,62 @@ class QuestionDedupService:
         
         if len(questions_for_similarity) > 1:
             print(f"参与相似度计算的题目: {len(questions_for_similarity)} 题")
-            
+
+            # 检查任务状态（相似度计算开始前）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+
             # 步骤3 - 提取特征片段（N-gram）
             question_ngrams = {}
             for q in questions_for_similarity:
+                # 检查任务状态（在循环中）
+                if task_id:
+                    task = DedupTask.query.get(task_id)
+                    if task and task.status != 'running':
+                        if task.status == 'paused':
+                            raise RuntimeError(f"任务 {task_id} 已暂停")
+                        elif task.status in ['cancelled', 'completed', 'error']:
+                            raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+
                 ngrams = QuestionDedupService._extract_ngrams(q['cleaned_content'], n=3)
                 question_ngrams[q['question_id']] = ngrams
             print(f"N-gram提取完成")
             
+            # 检查任务状态（步骤3后）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+            
+            # 检查任务状态（MinHash生成前）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+
             # 步骤4 - 生成指纹（MinHash）
             question_fingerprints = []
             for q in questions_for_similarity:
+                # 检查任务状态（在循环中）
+                if task_id:
+                    task = DedupTask.query.get(task_id)
+                    if task and task.status != 'running':
+                        if task.status == 'paused':
+                            raise RuntimeError(f"任务 {task_id} 已暂停")
+                        elif task.status in ['cancelled', 'completed', 'error']:
+                            raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+                
                 ngrams = question_ngrams[q['question_id']]
                 minhash = QuestionDedupService._generate_minhash(ngrams, num_hashes=128)
                 question_fingerprints.append({
@@ -739,14 +825,50 @@ class QuestionDedupService:
                 })
             print(f"MinHash生成完成: {len(question_fingerprints)} 个指纹")
             
+            # 检查任务状态（步骤4后）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+            
+            # 检查任务状态（LSH分桶前）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+
             # 步骤5 - LSH 分桶
             buckets = QuestionDedupService._lsh_bucketing(
-                question_fingerprints, 
-                num_bands=16, 
+                question_fingerprints,
+                num_bands=16,
                 rows_per_band=8
             )
             print(f"LSH分桶完成: {len(buckets)} 个非空桶")
             
+            # 检查任务状态（步骤5后）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+            
+            # 检查任务状态（相似度计算前）
+            if task_id:
+                task = DedupTask.query.get(task_id)
+                if task and task.status != 'running':
+                    if task.status == 'paused':
+                        raise RuntimeError(f"任务 {task_id} 已暂停")
+                    elif task.status in ['cancelled', 'completed', 'error']:
+                        raise RuntimeError(f"任务 {task_id} 状态为 {task.status}")
+
             # 步骤6 - 桶内精算重复程度
             similar_duplicates = QuestionDedupService._calculate_similar_duplicates(
                 questions_for_similarity,
